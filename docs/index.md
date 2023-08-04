@@ -2,7 +2,7 @@
   .block img {
     float: left;
     margin-right: 3.5em;
-    max-height: 100%;
+    max-height: 25%;
   }
   .block h1, blockquote {
     overflow: hidden
