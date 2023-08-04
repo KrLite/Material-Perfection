@@ -8,7 +8,7 @@
   justify-content: flex-start;
  }
 
- .combined img {
+ .combined span {
   height: auto;
   width: 5.7em;
   max-height: 100%;
@@ -28,16 +28,17 @@
 </style>
 
 <div class="container combined">
-  <img
-    class="filtered"
-    src="logo.png"
-    alt="Material Perfection"
-   />
+  <span class="colored" style="-webkit-mask-image: url('logo.png');">
+	<img
+      src="logo.png"
+      alt="Material Perfection"
+    />
+   </span>
   <div class="content">
     <h1>Material Perfection</h1>
     <blockquote>
-    An Out-of-the-box Repository that Toggles <a href="https://github.com/squidfunk/mkdocs-material">mkdocs-material</a> to the Perfection.
-  </blockquote>
+      An Out-of-the-box Repository that Toggles <a href="https://github.com/squidfunk/mkdocs-material">mkdocs-material</a> to the Perfection.
+    </blockquote>
   </div>
 </div>
 
@@ -75,8 +76,6 @@
     button.addEventListener("click", function() {
       var attr = this.getAttribute("data-md-color-primary")
       document.body.setAttribute("data-md-color-primary", attr)
-      var name = document.querySelector("#__code_1 code span.l")
-      name.textContent = attr.replace("-", " ")
     })
   })
 </script>
