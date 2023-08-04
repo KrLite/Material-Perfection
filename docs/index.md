@@ -2,8 +2,9 @@
   .block img {
     float: left;
     margin-right: 3.5em;
-    width: 200em;
-    height: 200em;
+    margin-top: 2em;
+    width: 150em;
+    height: 150em;
     max-width: 25%;
     max-height: 25%;
     width: auto;
