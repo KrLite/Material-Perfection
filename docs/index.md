@@ -6,7 +6,6 @@
   height: auto;
   align-items: flex-start;
   justify-content: flex-start;
-  border: 1px solid blue;
  }
 
  .combined img {
@@ -16,7 +15,6 @@
   max-width: calc(30% - 3em);    
   margin-right: 3em;
   object-fit: contain;
-  border: 1px solid red;
  }
 
  .content {
