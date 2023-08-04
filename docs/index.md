@@ -1,9 +1,10 @@
-# Broken Thoughts<br /><blockquote>一些可有可无的故事</blockquote>
+<img
+width="150"
+height="150"
+align="left"
+src="../logo.png?raw=true"
+ />
 
-###### 在这里，你可以找到我的：[^issues]
+# Material Perfection
 
-### [学习笔记&emsp;`→`](notebook)
-
-### [涂鸦&emsp;`→`](doddles)
-
-[^issues]: 如果你发现了其中的某些知识性错误，[请随时为我指出！](https://github.com/KrLite/BrokenThoughts/issues)
+> An Out-of-the-box Repository that Toggles [mkdocs-material](https://github.com/squidfunk/mkdocs-material) to the perfection.
