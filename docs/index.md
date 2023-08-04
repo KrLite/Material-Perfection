@@ -2,7 +2,7 @@
  .container {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;     
+  width: 100%;
   height: auto;
   align-items: flex-start;
   justify-content: flex-start;
@@ -12,7 +12,7 @@
   height: auto;
   width: 5.7em;
   max-height: 100%;
-  max-width: calc(30% - 3em);    
+  max-width: calc(30% - 3em);
   margin-right: 3em;
   object-fit: contain;
  }
