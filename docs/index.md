@@ -2,10 +2,10 @@
   .block img {
     float: left;
     margin-right: 5em;
-    width: 200px;
-    height: 200px;
-    max-width:20%;
-    max-height:20%;
+    width: 200em;
+    height: 200em;
+    max-width: 25%;
+    max-height: 25%;
     width:auto;
     height:auto;
   }
@@ -15,7 +15,9 @@
 </style>
 
 <div class="block">
-  <img class="filtered" src="logo.png" />
+  <sup>
+    <img class="filtered" src="logo.png" />
+  </sup>
   <h1>
     Material Perfection
   </h1>
