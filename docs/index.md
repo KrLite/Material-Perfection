@@ -2,7 +2,7 @@
   .block img {
     float: left;
     margin-right: 3.5em;
-    margin-top: 3.5em;
+    margin-top: 1.5em;
     max-width: 20%;
     max-height: 20%;
     width: auto;
