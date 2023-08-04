@@ -1,31 +1,33 @@
 <style>
  .container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: auto;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;     
+  height: auto;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 1px solid blue;
+ }
 
-  .combined img {
-    height: auto;
-    width: 30%;
-    max-height: 100%;
-    max-width: calc(30% - 3em);
-    margin-right: 3em;
-    margin-bottom: auto;
-    margin-top: auto;
-  }
+ .combined img {
+  height: auto;
+  width: 30%;
+  max-height: 100%;
+  max-width: calc(30% - 3em);    
+  margin-right: 3em;
+  margin-bottom: auto;
+  margin-top: auto;
+  border: 1px solid red;
+ }
 
-  .content {
-    flex: 1;
-  }
+ .content {
+  flex: 1;
+ }
 
-  .combined h1, blockquote {
-    margin: 0;
-    padding: 0;
-  }
+ .combined h1, blockquote {
+  margin: 0;
+  padding: 0;
+ }
 </style>
 
 <div class="container combined">
