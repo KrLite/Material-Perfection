@@ -8,7 +8,7 @@
   .block h1, blockquote {
     overflow: hidden;
   }
-  .block blockquote p {
+  .block blockquote {
     padding: 0px;
     background: ;
   }
