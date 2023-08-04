@@ -3,11 +3,6 @@ CSS file from OI Wiki(https://github.com/OI-wiki/OI-wiki).
 By OI WikiI(https://github.com/OI-wiki).
  */
 
-/* Logo title */
-.md-header__topic:first-child {
-  font-weight: initial !important;
-}
-
 /* Code font size in <details> */
 details .linenos,
 details code {
@@ -19,6 +14,7 @@ details > summary + .highlight:last-child,
 details > summary + .tabbed-set:last-child {
   margin: 0 -0.6rem !important;
 }
+
 details > summary + .highlight:last-child > .highlighttable {
   margin: 0 !important;
 }
@@ -27,6 +23,7 @@ details > summary + .highlight:last-child > .highlighttable {
 .md-typeset__table {
   display: block !important;
 }
+
 .md-typeset table:not(.highlighttable) {
   display: table !important;
 }

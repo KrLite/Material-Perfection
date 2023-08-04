@@ -1,30 +1,47 @@
 <style>
- .container {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: auto;
-  align-items: flex-start;
-  justify-content: flex-start;
- }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 
- .combined span {
-  height: auto;
-  width: 5.7em;
-  max-height: 100%;
-  max-width: calc(30% - 3em);
-  margin-right: 3em;
-  object-fit: contain;
- }
+  .combined span {
+    height: auto;
+    width: 5.7em;
+    max-height: 100%;
+    max-width: calc(30% - 3em);
+    margin-right: 3em;
+    object-fit: contain;
+  }
 
- .content {
-  flex: 1;
- }
+  .content {
+    flex: 1;
+  }
 
- .combined h1, blockquote {
-  margin: 0;
-  padding: 0;
- }
+  .combined h1,
+  blockquote {
+    margin: 0;
+    padding: 0;
+  }
+
+  .mdx-switch button {
+    cursor: pointer;
+    transition: opacity 0.25s;
+  }
+
+  .mdx-switch button:focus,
+  .mdx-switch button:hover {
+    opacity: 0.75;
+  }
+
+  .mdx-switch button > code {
+    background-color: var(--md-primary-fg-color);
+    color: var(--md-primary-bg-color);
+    display: block;
+  }
 </style>
 
 <div class="container combined">
@@ -42,7 +59,13 @@
   </div>
 </div>
 
-### Choosing a Color
+<div class="mdx-switch">
+  <h3>
+    Choosing a Color
+	&thinsp;
+    <button data-md-color-primary="turquoise"><code>clear</code></button>
+  </h3>
+</div>
 
 <div class="mdx-switch">
   <button data-md-color-primary="red"><code>red</code></button>
@@ -66,8 +89,6 @@
   <button data-md-color-primary="blue-grey"><code>blue grey</code></button>
   <button data-md-color-primary="black"><code>black</code></button>
   <button data-md-color-primary="white"><code>white</code></button>
-  <br />
-  <button data-md-color-primary="turquoise"><code>clear</code></button>
 </div>
 
 <script>

@@ -32,7 +32,7 @@ CSS file to control global colors
 }
 
 /* Image color transformer */
-
+/* Credit: https://stackoverflow.com/a/76821538 */
 .colored {
   display: inline-block;
   background-color: var(--md-primary-fg-color);
