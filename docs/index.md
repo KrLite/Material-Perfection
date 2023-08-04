@@ -2,11 +2,7 @@
   .block img {
     float: left;
     margin-right: 3.5em;
-    margin-top: 1.5em;
-    max-width: 20%;
-    max-height: 20%;
-    width: auto;
-    height: auto;
+    max-height: 100%;
   }
   .block h1, blockquote {
     overflow: hidden
@@ -14,9 +10,11 @@
 </style>
 
 <div class="block">
-  <sup>
-    <img class="filtered" src="logo.png" />
-  </sup>
+  <div>
+    <sup>
+      <img class="filtered" src="logo.png" />
+    </sup>
+  </div>
   <h1>
     Material Perfection
   </h1>
