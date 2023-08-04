@@ -15,9 +15,7 @@
 </style>
 
 <div class="block">
-  <sup>
-    <img class="filtered" src="logo.png" />
-  </sup>
+  <img class="filtered" src="logo.png" />
   <h1>
     Material Perfection
   </h1>
