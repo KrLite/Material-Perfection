@@ -11,7 +11,7 @@
 
  .combined img {
   height: auto;
-  width: 12em;
+  width: 5em;
   max-height: 100%;
   max-width: calc(30% - 3em);    
   margin-right: 3em;
