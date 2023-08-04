@@ -35,7 +35,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python3
-          pipenv install
+          pipenv install --ignore-pipfile
 
       - name: Build mkdocs
         run: pipenv run mkdocs build -v

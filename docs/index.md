@@ -45,9 +45,9 @@
 </style>
 
 <div class="container combined">
-  <span class="colored" style="-webkit-mask-image: url('logo.png');">
+  <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
 	<img
-      src="logo.png"
+      src="assets/images/logo.png"
       alt="Material Perfection"
     />
    </span>
