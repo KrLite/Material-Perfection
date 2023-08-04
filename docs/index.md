@@ -4,13 +4,13 @@
     margin-right: 5em;
     width: 200px;
     height: 200px;
+    max-width:100%;
+    max-height:100%;
+    width:auto;
+    height:auto;
   }
   .block h1, blockquote {
     overflow: hidden;
-  }
-  .block blockquote {
-    padding: 0px;
-    background: ;
   }
 </style>
 
