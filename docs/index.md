@@ -21,12 +21,6 @@
   flex: 1;
  }
 
- @media screen and (min-width: 800px) {
-  .combined img {
-   max-width: none;
-  }
- }
-
  .combined h1, blockquote {
   margin: 0;
   padding: 0;
