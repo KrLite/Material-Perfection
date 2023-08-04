@@ -335,11 +335,13 @@ function execute() {
 
   switch (colorScheme) {
     case "default":
-      variableName = "--custom-primary-color--light";
+      variableName = "--md-primary-fg-color--light";
+      break;
     case "slate":
-      variableName = "--custom-primary-color--dark";
+      variableName = "--md-primary-fg-color--dark";
+      break;
     default:
-      variableName = "--custom-primary-color";
+      variableName = "--md-primary-fg-color";
   }
 
   const root = document.documentElement;
@@ -355,19 +357,42 @@ function execute() {
   const unfiltered = document.querySelectorAll(".unfiltered");
   const filtered = document.querySelectorAll(".filtered");
 
-  // Set the background color of all elements with the class 'realPixel'
+  // Set the background color of all elements with the class 'unfiltered'
   unfiltered.forEach((pixel) => {
     pixel.style.backgroundColor = color.toString();
   });
 
-  // Set the style attribute of all elements with the class 'filterPixel'
+  // Set the style attribute of all elements with the class 'filtered'
   filtered.forEach((pixel) => {
     pixel.setAttribute("style", result.filter);
   });
 
-  console.log("Filters ready: " + result.filter + " for color: " + colorName);
+  console.log(`Filters ready: ${result.filter} for color: ${colorName}`);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  execute();
+// Triggers execute() when DOM content loaded
+document.addEventListener("DOMContentLoaded", execute);
+
+// Triggers execute() when theme switched
+const target = document.querySelector("body");
+
+const observer = new MutationObserver(function (mutationsList, observer) {
+  for (let mutation of mutationsList) {
+    if (
+      mutation.type === "attributes" &&
+      mutation.attributeName === "data-md-color-scheme"
+    ) {
+      /*
+      const newColorScheme = target.getAttribute("data-md-color-scheme");
+      console.log(`Color scheme changed to ${newColorScheme}`);
+	   */
+
+      execute();
+    }
+  }
+});
+
+observer.observe(target, {
+  attributes: true,
+  attributeFilter: ["data-md-color-scheme"],
 });

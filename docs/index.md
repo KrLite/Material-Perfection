@@ -1,10 +1,13 @@
-<img
-width="150"
-height="150"
-align="left"
-src="logo.png"
-class="filtered"
- />
+<sup>
+  <img
+    width="290"
+    height="225"
+    align="left"
+    src="logo_expanded.png"
+    class="filtered"
+   />
+</sup>
+
 
 # Material Perfection
 
