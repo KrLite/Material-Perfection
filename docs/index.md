@@ -3,10 +3,8 @@
     float: left;
     margin-right: 3.5em;
     margin-top: 2em;
-    width: 110em;
-    height: 110em;
-    max-width: 40%;
-    max-height: 40%;
+    max-width: 110em;
+    max-height: 110em;
     width: auto;
     height: auto;
   }
