@@ -22,6 +22,6 @@
     Material Perfection
   </h1>
   <blockquote>
-    An Out-of-the-box Repository that Toggles <a href="https://github.com/squidfunk/mkdocs-material">mkdocs-material</a> to the perfection.
+    An Out-of-the-box Repository that Toggles <a href="https://github.com/squidfunk/mkdocs-material">mkdocs-material</a> to the Perfection.
   </blockquote>
 </div>
