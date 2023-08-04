@@ -71,6 +71,8 @@
   <button data-md-color-primary="blue-grey"><code>blue grey</code></button>
   <button data-md-color-primary="black"><code>black</code></button>
   <button data-md-color-primary="white"><code>white</code></button>
+  <br />
+  <button data-md-color-primary="turquoise"><code>clear</code></button>
 </div>
 
 <script>
