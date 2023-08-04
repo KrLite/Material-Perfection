@@ -2,7 +2,7 @@
 width="150"
 height="150"
 align="left"
-src="../logo.png?raw=true"
+src="logo.png"
  />
 
 # Material Perfection
