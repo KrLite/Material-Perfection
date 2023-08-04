@@ -30,14 +30,10 @@ theme:
       toggle:
         icon: material/octagram-outline
         name: Switch to light mode
-  include_search_page: false
-  search_index_only: true
-
   # Tips: Relative paths can navigate to svgs under path 'mkdocs-material/material/.icons'
   icon:
     logo: logo
     repo: fontawesome/brands/github-alt
-
   # Tips: currently, the text font is set under 'stylesheets/css/font.css'
   font:
     # text: 'Source Sans'
@@ -73,7 +69,7 @@ repo_url: https://github.com/KrLite/Material-Perfection/
 repo_name: KrLite/Material-Perfection
 
 # Copyright
-copyright: 'Copyright &copy; 2022 - 2023 KrLite'
+copyright: 'Copyright &copy; 2023 KrLite'
 
 # Customization
 extra_javascript:
@@ -84,7 +80,6 @@ extra_css:
   - 'stylesheets/css/colors.css?v=14' # Control global colors
   - 'stylesheets/css/font.css?v=14' # Change the fonts
   - 'stylesheets/css/colored_headings.css?v=14' # Color the headings
-  - 'stylesheets/css/oi_wiki.css?v=14' # CSS file from OI Wiki(https://github.com/OI-wiki/OI-wiki)
 
 # Plugins
 plugins:
@@ -93,9 +88,12 @@ plugins:
 
 # Extensions
 markdown_extensions:
+  - abbr
   - admonition
+  - attr_list
   - def_list
   - footnotes
+  - md_in_html
   - meta
   - toc:
       permalink: ""
