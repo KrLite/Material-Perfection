@@ -4,8 +4,8 @@
     margin-right: 5em;
     width: 200px;
     height: 200px;
-    max-width:45%;
-    max-height:45%;
+    max-width:20%;
+    max-height:20%;
     width:auto;
     height:auto;
   }
