@@ -12,32 +12,71 @@ hide:
     right: 0;
     position: absolute;
     margin: auto;
-    overflow: hidden;
   }
 
-  .fit {
+  .bg > div {
+	overflow: hidden;
+  }
+
+  .full-absolute {
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+  }
+
+  .full-relative {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+  }
+
+  .fit-absolute {
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
     position: absolute;
   }
 
-  .fit img {
+  .overflow-relative {
+	width: 100%;
+	height: 8.5em;
+	position: relative;
+	margin: auto;
+  }
+
+  .bg-img {
     width: 100%;
-    height: 100;
-    opacity: .1;
-    z-index: -3;
+    height: 100%;
+    opacity: .5;
+    z-index: -20;
+  }
+
+  .bg-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .overlay-gradient {
+    background: linear-gradient(var(--md-default-bg-color), 40%, transparent);
+    z-index: -10;
   }
 
   .bg-gradient {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    margin: auto;
-    background: linear-gradient(7deg, var(--md-primary-fg-color--auto), 32%, transparent);
-    opacity: .2;
-    z-index: -1;
+    background: linear-gradient(7deg, var(--md-primary-fg-color--auto), 32%, var(--md-default-bg-color));
+	opacity: .9;
+    z-index: -11;
     mix-blend-mode: multiply;
+  }
+
+  .fg-gradient {
+	background: linear-gradient(var(--md-primary-fg-color--auto), 30%, transparent);
+	opacity: .1;
+	z-index: -9;
   }
 
   .divider {
@@ -49,7 +88,7 @@ hide:
     background-repeat: no-repeat;
     opacity: .1;
   }
-	
+
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -108,10 +147,16 @@ hide:
 </style>
 
 <div class="bg">
-  <div class="fit">
-    <img class="parallax" src="assets/images/background.png" />
+  <div class="full-absolute">
+    <div class="fit-absolute">
+      <div class="bg-img">
+	    <img class="bg-img parallax" src="assets/images/background.png" />
+	  </div>
+    </div>
   </div>
-  <div class="bg-gradient"></div>
+  <div class="full-relative bg-gradient"></div>
+  <div class="overflow-relative fg-gradient"></div>
+  <div class="full-absolute overlay-gradient"></div>
 </div>
 
 <div class="container combined">
@@ -131,9 +176,21 @@ hide:
 
 # Mark It Down
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
+euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
+purus auctor massa, nec semper lorem quam in massa.
+
+Lorem ipsum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
+euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
+purus auctor massa, nec semper lorem quam in massa.
+
+Lorem ipsum.
+
 <div class="divider"></div>
 
-???+ colored-amt inline end "<span class="mdx-switch"><span class="colored-text">Paint it Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
+???+ colored-amt inline end "<span class="mdx-switch"><span class="colored-text">Paint It Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
 
     <div class="mdx-switch">
         <button data-md-color-primary="red"><code>red</code></button>
@@ -143,39 +200,66 @@ hide:
         <button data-md-color-primary="indigo"><code>indigo</code></button>
         <button data-md-color-primary="blue"><code>blue</code></button>
         <button data-md-color-primary="light-blue"><code>light blue</code></button>
-	<button data-md-color-primary="cyan"><code>cyan</code></button>
-	<button data-md-color-primary="teal"><code>teal</code></button>
-	<button data-md-color-primary="green"><code>green</code></button>
-	<button data-md-color-primary="light-green"><code>light green</code></button>
-	<button data-md-color-primary="lime"><code>lime</code></button>
-	<button data-md-color-primary="yellow"><code>yellow</code></button>
-	<button data-md-color-primary="amber"><code>amber</code></button>
-	<button data-md-color-primary="orange"><code>orange</code></button>
-	<button data-md-color-primary="deep-orange"><code>deep orange</code></button>
-	<button data-md-color-primary="brown"><code>brown</code></button>
-	<button data-md-color-primary="grey"><code>grey</code></button>
-	<button data-md-color-primary="blue-grey"><code>blue grey</code></button>
-	<button data-md-color-primary="black"><code>black</code></button>
-	<button data-md-color-primary="white"><code>white</code></button>
+        <button data-md-color-primary="cyan"><code>cyan</code></button>
+        <button data-md-color-primary="teal"><code>teal</code></button>
+        <button data-md-color-primary="green"><code>green</code></button>
+        <button data-md-color-primary="light-green"><code>light green</code></button>
+        <button data-md-color-primary="lime"><code>lime</code></button>
+        <button data-md-color-primary="yellow"><code>yellow</code></button>
+        <button data-md-color-primary="amber"><code>amber</code></button>
+        <button data-md-color-primary="orange"><code>orange</code></button>
+        <button data-md-color-primary="deep-orange"><code>deep orange</code></button>
+        <button data-md-color-primary="brown"><code>brown</code></button>
+        <button data-md-color-primary="grey"><code>grey</code></button>
+        <button data-md-color-primary="blue-grey"><code>blue grey</code></button>
+        <button data-md-color-primary="black"><code>black</code></button>
+        <button data-md-color-primary="white"><code>white</code></button>
         <code>and more...</code>
     </div>
 
-# Deep Customization
+<script>
+	var buttons = document.querySelectorAll("button[data-md-color-primary]");
+	buttons.forEach(function(button) {
+		button.addEventListener("click", function() {
+			var attr = this.getAttribute("data-md-color-primary");
+			document.body.setAttribute("data-md-color-primary", attr);
+		});
+	});
+</script>
 
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
-        euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
-        purus auctor massa, nec semper lorem quam in massa.
+<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
 
 <script>
-  var buttons = document.querySelectorAll("button[data-md-color-primary]");
-  buttons.forEach(function(button) {
-    button.addEventListener("click", function() {
-      var attr = this.getAttribute("data-md-color-primary");
-      document.body.setAttribute("data-md-color-primary", attr);
-    });
-  });
+	const image = document.getElementsByClassName('parallax');
+	new simpleParallax(image);
 </script>
+
+# Deep Customization
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
+euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
+purus auctor massa, nec semper lorem quam in massa.
+
+Lorem ipsum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
+euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
+purus auctor massa, nec semper lorem quam in massa.
+
+Lorem ipsum.
 
 <div class="divider"></div>
 
 # Out-of-the-Box
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
+euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
+purus auctor massa, nec semper lorem quam in massa.
+
+Lorem ipsum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
+euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
+purus auctor massa, nec semper lorem quam in massa.
+
+Lorem ipsum.
