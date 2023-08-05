@@ -108,7 +108,7 @@ hide:
         <code>and more...</code>
     </div>
 
-???+ colored-amt "Out of the Box"
+???+ colored-amt "<span class="colored-text">Mark it Down</span>"
 
     WIP
 
