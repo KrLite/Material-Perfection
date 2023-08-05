@@ -21,7 +21,6 @@ theme:
       toggle:
         icon: material/octagram
         name: Switch to dark mode
-
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -48,11 +47,11 @@ theme:
     - content.tabs.link
     - content.tooltips
     # - header.autohide
-    - navigation.expand
+    # - navigation.expand
     - navigation.footer
     - navigation.indexes
-    # - navigation.instant # Do not activate. Will break markdown math renderer.
-    - navigation.prune
+    # - navigation.instant # Breaks math rendering
+    # - navigation.prune
     - navigation.sections
     - navigation.tabs
     # - navigation.tabs.sticky
@@ -61,30 +60,36 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
-    - toc.follow
+    # - toc.follow
     - toc.integrate
 
 # Repository
 repo_url: https://github.com/KrLite/Material-Perfection/
 repo_name: KrLite/Material-Perfection
+edit_uri: edit/main/docs/
 
 # Copyright
 copyright: 'Copyright &copy; 2023 KrLite'
 
 # Customization
 extra_javascript:
-  - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML' # Markdown math resolver
+  - javascripts/mathjax.js # Markdown math resolver
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra_css:
-  - 'stylesheets/css/extra.css?v=14' # Optimize general appearances
-  - 'stylesheets/css/colors.css?v=14' # Control global colors
-  - 'stylesheets/css/font.css?v=14' # Change the fonts
-  - 'stylesheets/css/colored_headings.css?v=14' # Color the headings
+  - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
+  - stylesheets/css/extra.css # Optimize general appearances
+  - stylesheets/css/colors.css # Control global colors
+  - stylesheets/css/font.css # Change the fonts
+  - stylesheets/css/colored_headings.css # Color the headings
 
 # Plugins
 plugins:
   - search
   - mermaid2
+  - git-revision-date-localized:
+      enable_creation_date: true
 
 # Extensions
 markdown_extensions:
@@ -116,6 +121,8 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.snippets:
       check_paths: true
+      auto_append:
+        - includes/abbreviations.md
   - pymdownx.progressbar
   - pymdownx.smartsymbols
   - pymdownx.superfences:
