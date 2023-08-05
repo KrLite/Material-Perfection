@@ -13,12 +13,12 @@ CSS file to control global colors
   --md-primary-fg-color--light: var(--custom-primary-color);
   --md-primary-fg-color--dark: var(--custom-secondary-color);
   --md-primary-bg-color: white;
-  --md-primary-bg-color--light: rgba(white, 0.7);
+  --md-primary-bg-color--light: rgba(white, .7);
 
   --md-accent-fg-color: var(--custom-secondary-color);
-  --md-accent-fg-color--transparent: rgba(var(--md-accent-fg-color), 0.1);
+  --md-accent-fg-color--transparent: rgba(var(--md-accent-fg-color), .1);
   --md-accent-bg-color: white;
-  --md-accent-bg-color--light: rgba(white, 0.7);
+  --md-accent-bg-color--light: rgba(white, .7);
 }
 
 [data-md-color-scheme="default"] {
