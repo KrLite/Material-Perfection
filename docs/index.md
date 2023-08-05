@@ -15,17 +15,17 @@ hide:
   }
 
   .bg > div {
-	overflow: hidden;
+    overflow: hidden;
   }
 
   .full-absolute {
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
   }
 
   .full-relative {
@@ -43,10 +43,10 @@ hide:
   }
 
   .overflow-relative {
-	width: 100%;
-	height: 8.5em;
-	position: relative;
-	margin: auto;
+    width: 100%;
+    height: 8.5em;
+    position: relative;
+    margin: auto;
   }
 
   .bg-img {
@@ -54,11 +54,6 @@ hide:
     height: 100%;
     opacity: .5;
     z-index: -20;
-  }
-
-  .bg-img img {
-    width: 100%;
-    height: 100%;
   }
 
   .overlay-gradient {
@@ -149,9 +144,7 @@ hide:
 <div class="bg">
   <div class="full-absolute">
     <div class="fit-absolute">
-      <div class="bg-img">
-	    <img class="bg-img parallax" src="assets/images/background.png" />
-	  </div>
+      <img class="bg-img parallax" src="assets/images/background.png" />
     </div>
   </div>
   <div class="full-relative bg-gradient"></div>
