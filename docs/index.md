@@ -150,9 +150,11 @@ hide:
         <code>and more...</code>
     </div>
 
+```
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
+```
 
 <script>
   var buttons = document.querySelectorAll("button[data-md-color-primary]");
