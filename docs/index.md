@@ -77,8 +77,6 @@ hide:
   </div>
 </div>
 
-<div>
-
 !!! colored-amt "<span class="colored-text">Mark it Down</span>"
 
     WIP
@@ -123,5 +121,3 @@ buttons.forEach(function(button) {
 ???+ colored-amt "<span class="colored-text">Out of the Box</span>"
 
     WIP
-
-</div>
