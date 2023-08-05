@@ -77,16 +77,20 @@ hide:
   </div>
 </div>
 
+!!! colored-amt "<span class="colored-text">Mark it Down</span>"
+
+    WIP
+
 ???+ colored-amt "<span class="mdx-switch"><span class="colored-text">Paint it Pretty</span>&emsp;<button data-md-color-primary="turquoise"><code>clear</code></button></span>"
 
-	<div class="mdx-switch">
-	<button data-md-color-primary="red"><code>red</code></button>
-	<button data-md-color-primary="pink"><code>pink</code></button>
-	<button data-md-color-primary="purple"><code>purple</code></button>
-	<button data-md-color-primary="deep-purple"><code>deep purple</code></button>
-	<button data-md-color-primary="indigo"><code>indigo</code></button>
-	<button data-md-color-primary="blue"><code>blue</code></button>
-	<button data-md-color-primary="light-blue"><code>light blue</code></button>
+    <div class="mdx-switch">
+        <button data-md-color-primary="red"><code>red</code></button>
+        <button data-md-color-primary="pink"><code>pink</code></button>
+        <button data-md-color-primary="purple"><code>purple</code></button>
+        <button data-md-color-primary="deep-purple"><code>deep purple</code></button>
+        <button data-md-color-primary="indigo"><code>indigo</code></button>
+        <button data-md-color-primary="blue"><code>blue</code></button>
+        <button data-md-color-primary="light-blue"><code>light blue</code></button>
 	<button data-md-color-primary="cyan"><code>cyan</code></button>
 	<button data-md-color-primary="teal"><code>teal</code></button>
 	<button data-md-color-primary="green"><code>green</code></button>
@@ -102,7 +106,11 @@ hide:
 	<button data-md-color-primary="black"><code>black</code></button>
 	<button data-md-color-primary="white"><code>white</code></button>
         <code>and more...</code>
-	</div>
+    </div>
+
+???+ Out of the Box
+
+    WIP
 
 <script>
 var buttons = document.querySelectorAll("button[data-md-color-primary]")
@@ -113,5 +121,3 @@ buttons.forEach(function(button) {
 	})
 })
 </script>
-
-
