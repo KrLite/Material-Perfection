@@ -5,21 +5,30 @@ hide:
 ---
 
 <style>
-  .bg-img {
+  .bg {
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     position: absolute;
     margin: auto;
+  }
+
+  .bg img {
+    width: 100%
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50;
+    transform: translate(-50%, -50%);
     z-index: -3;
   }
 
   .bg-overlay {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
+    height: 100%;
     position: absolute;
     margin: auto;
     background-color: var(--md-primary-fg-color--auto);
@@ -29,10 +38,8 @@ hide:
   }
 
   .bg-gradient {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width: 100%;
+    height: 100%;
     position: absolute;
     margin: auto;
     background: linear-gradient(7deg, var(--md-primary-fg-color--auto), 32%, transparent);
@@ -106,8 +113,8 @@ hide:
   }
 </style>
 
-<div>
-  <img class="bg-img" src="assets/images/background.png" />
+<div class="bg">
+  <img src="assets/images/background.png" />
   <div class="bg-overlay"></div>
   <div class="bg-gradient"></div>
 </div>
