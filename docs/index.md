@@ -53,25 +53,21 @@ hide:
     width: 100%;
     height: 100%;
     opacity: .5;
-    z-index: -20;
   }
 
   .overlay-gradient {
     background: linear-gradient(var(--md-default-bg-color), 40%, transparent);
-    z-index: -10;
   }
 
   .bg-gradient {
     background: linear-gradient(7deg, var(--md-primary-fg-color--auto), 32%, var(--md-default-bg-color));
-	opacity: .9;
-    z-index: -11;
+    opacity: .9;
     mix-blend-mode: multiply;
   }
 
   .fg-gradient {
-	background: linear-gradient(var(--md-primary-fg-color--auto), 30%, transparent);
-	opacity: .1;
-	z-index: -9;
+    background: linear-gradient(var(--md-primary-fg-color--auto), 30%, transparent);
+    opacity: .1;
   }
 
   .divider {
@@ -88,7 +84,7 @@ hide:
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: calc(75vh - 5em);
+    height: 75vh;
     align-items: flex-start;
     justify-content: flex-start;
   }
@@ -141,24 +137,26 @@ hide:
   }
 </style>
 
+<!--
 <div class="bg">
+  <div class="full-relative bg-gradient"></div>
+  <div class="overflow-relative fg-gradient"></div>
+  <div class="full-absolute overlay-gradient"></div>
+</div>
+-->
+
+<div class="container combined">
   <div class="full-absolute">
     <div class="fit-absolute">
       <img class="bg-img parallax" src="assets/images/background.png" />
     </div>
   </div>
-  <div class="full-relative bg-gradient"></div>
-  <div class="overflow-relative fg-gradient"></div>
-  <div class="full-absolute overlay-gradient"></div>
-</div>
-
-<div class="container combined">
   <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
 	<img
       src="assets/images/logo.png"
       alt="Material Perfection"
     />
-   </span>
+  </span>
   <div class="content">
     <h1>Material Perfection</h1>
     <blockquote>
