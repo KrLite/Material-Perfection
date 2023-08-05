@@ -99,11 +99,11 @@ hide:
     object-fit: contain;
   }
 
-  .content {
+  .content-flex {
     flex: 1;
   }
 
-  .combined blockquote {
+  #translucent {
     opacity: 1;
   }
 
@@ -124,11 +124,11 @@ hide:
   }
 
   .colored-text {
-	color: var(--md-primary-fg-color--auto);
+    color: var(--md-primary-fg-color--auto);
   }
 
   .md-typeset details.colored-amt, .admonition.colored-amt {
-	font-size: .9em;
+    font-size: .9em;
   }
 </style>
 
@@ -150,9 +150,9 @@ hide:
       alt="Material Perfection"
     />
   </span>
-  <div class="content">
+  <div class="content-flex">
     <h1>Material Perfection</h1>
-    <blockquote>
+    <blockquote id="translucent">
       An Out-of-the-Box Repository that Toggles <a href="https://github.com/squidfunk/mkdocs-material">mkdocs-material</a> to the Perfection.
     </blockquote>
   </div>
