@@ -21,20 +21,9 @@ hide:
     min-height: 100%;
     position: absolute;
     top: 50%;
-    left: 50;
+    left: 50%;
     transform: translate(-50%, -50%);
     z-index: -3;
-  }
-
-  .bg-overlay {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    margin: auto;
-    background-color: var(--md-primary-fg-color--auto);
-    opacity: .3;
-    z-index: -2;
-    mix-blend-mode: multiply;
   }
 
   .bg-gradient {
@@ -43,8 +32,9 @@ hide:
     position: absolute;
     margin: auto;
     background: linear-gradient(7deg, var(--md-primary-fg-color--auto), 32%, transparent);
-    opacity: .25;
+    opacity: .8;
     z-index: -1;
+    mix-blend-mode: multiply;
   }
 	
   .divider {
