@@ -119,6 +119,8 @@ hide:
   </div>
 </div>
 
+# Mark It Down
+
 ???+ inline-end colored-amt "<span class="mdx-switch"><span class="colored-text">Paint it Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
 
     <div class="mdx-switch">
@@ -146,6 +148,15 @@ hide:
         <code>and more...</code>
     </div>
 
+    <div>
+      <h1>Deep Customization</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
+        euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
+        purus auctor massa, nec semper lorem quam in massa.
+      </p>
+    </div>
+
 <script>
   var buttons = document.querySelectorAll("button[data-md-color-primary]");
   buttons.forEach(function(button) {
@@ -156,6 +167,4 @@ hide:
   });
 </script>
 
-### Mark It Down
-
-### Out-of-the-Box
+# Out-of-the-Box
