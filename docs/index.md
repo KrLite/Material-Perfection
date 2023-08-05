@@ -57,7 +57,7 @@ hide:
 	color: var(--md-primary-fg-color--auto);
   }
 
-  .md-typeset details.colored-amt {
+  .md-typeset details.colored-amt, .admonition.colored-amt {
 	font-size: .9em;
   }
 </style>
@@ -76,6 +76,8 @@ hide:
     </blockquote>
   </div>
 </div>
+
+<div>
 
 !!! colored-amt "<span class="colored-text">Mark it Down</span>"
 
@@ -108,10 +110,6 @@ hide:
         <code>and more...</code>
     </div>
 
-???+ colored-amt "<span class="colored-text">Mark it Down</span>"
-
-    WIP
-
 <script>
 var buttons = document.querySelectorAll("button[data-md-color-primary]")
 buttons.forEach(function(button) {
@@ -121,3 +119,9 @@ buttons.forEach(function(button) {
 	})
 })
 </script>
+
+???+ colored-amt "<span class="colored-text">Out of the Box</span>"
+
+    WIP
+
+</div>
