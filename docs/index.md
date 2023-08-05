@@ -5,6 +5,17 @@ hide:
 ---
 
 <style>
+  .bg {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    background: linear-gradient(7deg, var(--md-primary-fg-color), 59%, transparent);
+    z-index: -1;
+  }
+	
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -61,6 +72,8 @@ hide:
 	font-size: .9em;
   }
 </style>
+
+<div class="bg"></div>
 
 <div class="container combined">
   <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
