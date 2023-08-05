@@ -111,9 +111,9 @@ hide:
 </script>
 
 <div class="container combined">
-  <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
+  <span class="colored" style="-webkit-mask-image: url('assets/images/background.png');">
 	<img
-      src="assets/images/logo.png"
+      src="assets/images/background.png"
       alt="Material Perfection"
     />
    </span>
