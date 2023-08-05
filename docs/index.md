@@ -16,6 +16,15 @@ hide:
     opacity: .25;
     z-index: -1;
   }
+
+  .divider {
+    width: 100%;
+    height: 30vh;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
 	
   .container {
     display: flex;
@@ -91,7 +100,7 @@ hide:
   </div>
 </div>
 
-<div height="35vh"></div>
+<div class="divider"></div>
 
 !!! colored-amt "<span class="colored-text">Mark it Down</span>"
 
