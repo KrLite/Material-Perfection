@@ -5,69 +5,8 @@ hide:
 ---
 
 <style>
-  .bg {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: absolute;
-    margin: auto;
-  }
-
-  .bg > div {
-    overflow: hidden;
-  }
-
-  .full-absolute {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-  }
-
-  .full-relative {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    margin: auto;
-  }
-
-  .fit-absolute {
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    position: absolute;
-  }
-
-  .overflow-relative {
-    width: 100%;
-    height: 8.5em;
-    position: relative;
-    margin: auto;
-  }
-
-  .bg-img {
-    width: 100%;
-    height: 100%;
+  .translucent {
     opacity: .5;
-  }
-
-  .overlay-gradient {
-    background: linear-gradient(var(--md-default-bg-color), 40%, transparent);
-  }
-
-  .bg-gradient {
-    background: linear-gradient(7deg, var(--md-primary-fg-color--auto), 32%, var(--md-default-bg-color));
-    opacity: .9;
-    mix-blend-mode: multiply;
-  }
-
-  .fg-gradient {
-    background: linear-gradient(var(--md-primary-fg-color--auto), 30%, transparent);
-    opacity: .1;
   }
 
   .divider {
@@ -81,15 +20,15 @@ hide:
   }
 
   .container {
-    display: flex;
-    flex-wrap: wrap;
     width: 100%;
     height: 75vh;
+    display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
   }
 
-  .combined span {
+  .combined {
     height: auto;
     width: 5.7em;
     max-height: 100%;
@@ -101,10 +40,6 @@ hide:
 
   .content-flex {
     flex: 1;
-  }
-
-  #translucent {
-    opacity: 1;
   }
 
   .mdx-switch button {
@@ -140,27 +75,20 @@ hide:
 </div>
 -->
 
-<div class="container combined">
-  <div class="bg">
-    <div class="full-absolute">
-      <div class="fit-absolute">
-        <img class="bg-img parallax" src="assets/images/background.png" />
-      </div>
-    </div>
-  </div>
-  <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
-	<img
+<section class="container">
+  <span class="colored combined" style="-webkit-mask-image: url('assets/images/logo.png');">
+  <img
       src="assets/images/logo.png"
       alt="Material Perfection"
     />
   </span>
   <div class="content-flex">
     <h1>Material Perfection</h1>
-    <blockquote id="translucent">
+    <blockquote class="translucent">
       An Out-of-the-Box Repository that Toggles <a href="https://github.com/squidfunk/mkdocs-material">mkdocs-material</a> to the Perfection.
     </blockquote>
   </div>
-</div>
+</section>
 
 # Mark It Down
 
@@ -213,13 +141,6 @@ Lorem ipsum.
 			document.body.setAttribute("data-md-color-primary", attr);
 		});
 	});
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
-
-<script>
-	const image = document.getElementsByClassName('parallax');
-	new simpleParallax(image);
 </script>
 
 # Deep Customization
