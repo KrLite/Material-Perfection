@@ -89,11 +89,27 @@ hide:
 
 <div class="bg">
   <span class="colored" style="-webkit-mask-image: url('assets/images/joakim-nadell-K67sBVqLLuw-unsplash.jpg');">
-	<img
+    <img
+      class="parallax"
       src="assets/images/joakim-nadell-K67sBVqLLuw-unsplash.jpg"
     />
   </span>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
+
+<script>
+  var images = document.querySelectorAll('.parallax');
+  new simpleParallax(images, {
+    delay: .6,
+    orientation: 'down',
+    scale: 1.3,
+    transition: 'cubic-bezier(0, 0, 0, 1)',
+    overflow: false,
+    customContainer: '.container',
+    customWrapper: '.wrapper'
+});
+</script>
 
 <div class="container combined">
   <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
