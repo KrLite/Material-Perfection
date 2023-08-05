@@ -148,14 +148,14 @@ hide:
         <code>and more...</code>
     </div>
 
-    <div>
-      <h1>Deep Customization</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
+<div>
+  <h1>Deep Customization</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
-      </p>
-    </div>
+  </p>
+</div>
 
 <script>
   var buttons = document.querySelectorAll("button[data-md-color-primary]");
