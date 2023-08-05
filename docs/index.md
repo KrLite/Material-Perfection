@@ -17,6 +17,10 @@ hide:
     z-index: -1;
   }
 
+  .bg img {
+    z-index: -2;
+  }
+
   .divider {
     width: 100%;
     height: 300px;
@@ -83,7 +87,13 @@ hide:
   }
 </style>
 
-<div class="bg"></div>
+<div class="bg">
+  <span class="colored" style="-webkit-mask-image: url('assets/images/joakim-nadell-K67sBVqLLuw-unsplash.jpg');">
+	<img
+      src="assets/images/joakim-nadell-K67sBVqLLuw-unsplash.jpg"
+    />
+  </span>
+</div>
 
 <div class="container combined">
   <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
