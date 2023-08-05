@@ -119,7 +119,7 @@ hide:
   </div>
 </div>
 
-!!! colored-amt "<span class="colored-text">Mark it Down</span>"
+!!! inline colored-amt "<span class="colored-text">Mark it Down</span>"
 
     WIP
 
@@ -160,6 +160,6 @@ hide:
   });
 </script>
 
-???+ colored-amt "<span class="colored-text">Out of the Box</span>"
+???+ inline-end colored-amt "<span class="colored-text">Out of the Box</span>"
 
     WIP
