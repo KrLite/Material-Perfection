@@ -12,7 +12,8 @@ hide:
     right: 0;
     position: absolute;
     margin: auto;
-    background: linear-gradient(7deg, var(--custom-primary-color--transparent), 32%, transparent);
+    background: linear-gradient(7deg, var(--md-primary-fg-color--auto), 32%, transparent);
+    opacity: .25;
     z-index: -1;
   }
 	
