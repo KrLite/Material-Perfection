@@ -112,15 +112,7 @@ hide:
 
 <script>
   var images = document.querySelectorAll('.parallax');
-  new simpleParallax(images, {
-    delay: .6,
-    orientation: 'down',
-    scale: 3,
-    transition: 'cubic-bezier(0, 0, 0, 1)',
-    overflow: false,
-    customContainer: '.container',
-    customWrapper: '.wrapper'
-});
+  new simpleParallax(images);
 </script>
 
 <div class="container combined">
