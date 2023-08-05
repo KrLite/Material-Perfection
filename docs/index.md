@@ -106,6 +106,8 @@ hide:
   <div class="bg-gradient"></div>
 </div>
 
+<img class="parallax" src="assets/images/background.png" />
+
 <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
 
 <script>
