@@ -123,7 +123,7 @@ hide:
 
 # Deeply Customized
 
-???+ inline-end colored-amt "<span class="mdx-switch"><span class="colored-text">Paint it Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
+???+ colored-amt inline end "<span class="mdx-switch"><span class="colored-text">Paint it Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
 
     <div class="mdx-switch">
         <button data-md-color-primary="red"><code>red</code></button>
@@ -150,11 +150,9 @@ hide:
         <code>and more...</code>
     </div>
 
-```
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
-```
 
 <script>
   var buttons = document.querySelectorAll("button[data-md-color-primary]");
