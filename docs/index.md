@@ -123,7 +123,7 @@ hide:
 
     WIP
 
-???+ colored-amt "<span class="mdx-switch"><span class="colored-text">Paint it Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
+???+ inline-end colored-amt "<span class="mdx-switch"><span class="colored-text">Paint it Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
 
     <div class="mdx-switch">
         <button data-md-color-primary="red"><code>red</code></button>
@@ -160,6 +160,6 @@ hide:
   });
 </script>
 
-???+ inline-end colored-amt "<span class="colored-text">Out of the Box</span>"
+???+ colored-amt "<span class="colored-text">Out of the Box</span>"
 
     WIP
