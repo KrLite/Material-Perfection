@@ -103,13 +103,8 @@ hide:
     flex: 1;
   }
 
-  .combined h1, blockquote {
-    margin: 0;
-    padding: 0;
-  }
-
   .combined blockquote {
-    opacity: 0.5;
+    opacity: 1;
   }
 
   .mdx-switch button {
@@ -146,10 +141,8 @@ hide:
 -->
 
 <div class="container combined">
-  <div class="full-absolute">
-    <div class="fit-absolute">
-      <img class="bg-img parallax" src="assets/images/background.png" />
-    </div>
+  <div class="fit-absolute">
+    <img class="bg-img parallax" src="assets/images/background.png" />
   </div>
   <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
 	<img
