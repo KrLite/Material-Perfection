@@ -121,8 +121,6 @@ hide:
 
 # Mark It Down
 
-# Deeply Customized
-
 ???+ colored-amt inline end "<span class="mdx-switch"><span class="colored-text">Paint it Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
 
     <div class="mdx-switch">
@@ -149,6 +147,8 @@ hide:
 	<button data-md-color-primary="white"><code>white</code></button>
         <code>and more...</code>
     </div>
+
+# Deep Customization
 
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
