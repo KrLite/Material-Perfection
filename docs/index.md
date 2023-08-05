@@ -13,7 +13,8 @@
     width: 5.7em;
     max-height: 100%;
     max-width: calc(30% - 3em);
-    margin-right: 3em;
+    margin-left: 1.1em;
+    margin-right: 1.9em;
     object-fit: contain;
   }
 
