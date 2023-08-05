@@ -15,7 +15,7 @@ hide:
   }
 
   .bg img {
-    width: 100%
+    width: 100%;
     height: auto;
     min-width: 100%;
     min-height: 100%;
@@ -23,6 +23,7 @@ hide:
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: .2;
     z-index: -3;
   }
 
@@ -105,7 +106,6 @@ hide:
 
 <div class="bg">
   <img src="assets/images/background.png" />
-  <div class="bg-overlay"></div>
   <div class="bg-gradient"></div>
 </div>
 
