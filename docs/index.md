@@ -15,11 +15,16 @@ hide:
     overflow: hidden;
   }
 
-  .bg img {
+  .fit {
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
     position: absolute;
+  }
+
+  .fit img {
+    width: 100%;
+    height: 100;
     opacity: .1;
     z-index: -3;
   }
@@ -93,7 +98,9 @@ hide:
 </style>
 
 <div class="bg">
-  <img class="parallax" src="assets/images/background.png" />
+  <div class="fit">
+    <img class="parallax" src="assets/images/background.png" />
+  </div>
   <div class="bg-gradient"></div>
 </div>
 
