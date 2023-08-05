@@ -51,10 +51,10 @@ hide:
   }
 
   .colored-text {
-	color: var(--md-primary-fg-color);
+	color: var(--md-primary-fg-color--auto);
   }
 
-  .md-typeset .admonition.colored-amt {
+  .md-typeset details.colored-amt {
 	font-size: .9em;
   }
 </style>
@@ -74,7 +74,7 @@ hide:
   </div>
 </div>
 
-!!! colored-amt "<span class="mdx-switch"><span class="colored-text">Choosing a Color</span>&emsp;<button data-md-color-primary="turquoise"><code>clear</code></button></span>"
+???+ colored-amt "<span class="mdx-switch"><span class="colored-text">Choosing a Color</span>&emsp;<button data-md-color-primary="turquoise"><code>clear</code></button></span>"
 
 	<div class="mdx-switch">
 	<button data-md-color-primary="red"><code>red</code></button>
