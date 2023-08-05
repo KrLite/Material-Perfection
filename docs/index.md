@@ -141,8 +141,10 @@ hide:
 -->
 
 <div class="container combined">
-  <div class="fit-absolute">
-    <img class="bg-img parallax" src="assets/images/background.png" />
+  <div class="full-relative">
+    <div class="fit-absolute">
+      <img class="bg-img parallax" src="assets/images/background.png" />
+    </div>
   </div>
   <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
 	<img
