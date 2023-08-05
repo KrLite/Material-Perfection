@@ -43,10 +43,11 @@ hide:
   .divider {
     height: 3em;
     width: 100%;
-    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3) 50%, transparent);
+    background: linear-gradient(to right, transparent, var(--md-primary-fg-color--auto) 50%, transparent);
     background-size: 100% 0.5em;
     background-position: center;
     background-repeat: no-repeat;
+    opacity: .25;
   }
 	
   .container {
