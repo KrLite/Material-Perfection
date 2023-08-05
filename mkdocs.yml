@@ -15,7 +15,7 @@ theme:
   favicon: assets/favicon.png
   palette:
     # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
+    - media: '(prefers-color-scheme: light)'
       scheme: default
       primary: custom
       accent: custom
@@ -23,7 +23,7 @@ theme:
         icon: material/octagram
         name: Switch to dark mode
     # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
+    - media: '(prefers-color-scheme: dark)'
       scheme: slate
       primary: custom
       accent: custom
@@ -75,6 +75,7 @@ copyright: 'Copyright &copy; 2023 KrLite'
 # Customization
 extra_javascript:
   - javascripts/mathjax.js # Markdown math resolver
+  - javascripts/dark_mode.js # Auto dark mode
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
@@ -100,7 +101,7 @@ markdown_extensions:
   - md_in_html
   - meta
   - toc:
-      permalink: ""
+      permalink: ''
       slugify: !!python/name:pymdownx.slugs.uslugify
   - pymdownx.arithmatex:
       generic: true

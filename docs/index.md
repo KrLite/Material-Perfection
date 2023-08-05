@@ -214,12 +214,12 @@ Lorem ipsum.
 </script>
 
 <script>
-  function getElementFadingPercentage(el) {
-	offset = el.getAttribute('data-fade-offset') || 0;
-	duration = el.getAttribute('data-fade-duration') || window.innerHeight;
-	multiplier = el.getAttribute('data-fade-duration-multiplier') || 1;
+  function getElementFadingPercentage(element) {
+	const offset = element.getAttribute('data-fade-offset') || 0;
+	const duration = element.getAttribute('data-fade-duration') || window.innerHeight;
+	const multiplier = element.getAttribute('data-fade-duration-multiplier') || 1;
 
-    var rect = el.getBoundingClientRect();
+    var rect = element.getBoundingClientRect();
 	var screenCssPixelRatio = (window.outerWidth - 8) / window.innerWidth;
     return Math.min(Math.max(rect.top - offset, 0) / (duration * multiplier) * screenCssPixelRatio, 1);
   }
@@ -227,34 +227,31 @@ Lorem ipsum.
   function handleFade() {
     var elements = document.getElementsByClassName('fade');
 
-    for (var i = 0; i < elements.length; i++) {
-      var element = elements[i];
+    Array.from(elements).forEach((element) => {
       element.style.opacity = getElementFadingPercentage(element);
-    }
+    });
   }
 
   function handleBlur() {
     var elements = document.getElementsByClassName('blur');
 
-    for (var i = 0; i < elements.length; i++) {
-      var element = elements[i];
-	  radius = Math.pow(1 - getElementFadingPercentage(element), 2) * (element.getAttribute('data-blur-radius') || 16);
+    Array.from(elements).forEach((element) => {
+	  const radius = Math.pow(1 - getElementFadingPercentage(element), 2) * (element.getAttribute('data-blur-radius') || 16);
 
       element.style.filter = `blur(${radius}px)`;
       element.style.webkitFilter = `blur(${radius}px)`;
-    }
+    });
   }
 
   function handleShift() {
     var elements = document.getElementsByClassName('shift');
 
-    for (var i = 0; i < elements.length; i++) {
-      var element = elements[i];
-	  duration = (1 - getElementFadingPercentage(element)) * (element.getAttribute('data-shift-duration') || window.innerHeight);
-	  multiplier = element.getAttribute('data-shift-duration-multiplier') || 1;
+    Array.from(elements).forEach((element) => {
+	  const duration = (1 - getElementFadingPercentage(element)) * (element.getAttribute('data-shift-duration') || window.innerHeight);
+	  const multiplier = element.getAttribute('data-shift-duration-multiplier') || 1;
 
       element.style.transform = `translateY(${duration * multiplier}px)`;
-    }
+    });
   }
 
   document.addEventListener('DOMContentLoaded', function() {
