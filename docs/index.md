@@ -13,15 +13,14 @@ hide:
     position: absolute;
     margin: auto;
     overflow: hidden;
-  }
-
-  .bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    opacity: .1;
-    z-index: -3;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      opacity: .1;
+      z-index: -3;
+    }
   }
 
   .bg-gradient {
@@ -35,20 +34,11 @@ hide:
     mix-blend-mode: multiply;
   }
 	
-  .divider {
-    width: 100%;
-    height: 300px;
-    background-color: transparent;
-    border: none;
-    margin: 0;
-    padding: 0;
-  }
-	
   .container {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: auto;
+    height: 85vh;
     align-items: flex-start;
     justify-content: flex-start;
   }
@@ -106,8 +96,6 @@ hide:
   <div class="bg-gradient"></div>
 </div>
 
-<img class="parallax" src="assets/images/background.png" />
-
 <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
 
 <script>
@@ -129,8 +117,6 @@ hide:
     </blockquote>
   </div>
 </div>
-
-<div class="divider"></div>
 
 !!! colored-amt "<span class="colored-text">Mark it Down</span>"
 
