@@ -12,12 +12,14 @@ hide:
     right: 0;
     position: absolute;
     margin: auto;
+    overflow: hidden;
   }
 
   .bg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: absolute;
     opacity: .1;
     z-index: -3;
   }
