@@ -113,7 +113,7 @@ hide:
   new simpleParallax(images, {
     delay: .6,
     orientation: 'down',
-    scale: 1.3,
+    scale: 3,
     transition: 'cubic-bezier(0, 0, 0, 1)',
     overflow: false,
     customContainer: '.container',
