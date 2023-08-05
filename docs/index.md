@@ -114,14 +114,10 @@ hide:
   <div class="content">
     <h1>Material Perfection</h1>
     <blockquote>
-      An Out-of-the-box Repository that Toggles <a href="https://github.com/squidfunk/mkdocs-material">mkdocs-material</a> to the Perfection.
+      An Out-of-the-Box Repository that Toggles <a href="https://github.com/squidfunk/mkdocs-material">mkdocs-material</a> to the Perfection.
     </blockquote>
   </div>
 </div>
-
-!!! inline colored-amt "<span class="colored-text">Mark it Down</span>"
-
-    WIP
 
 ???+ inline-end colored-amt "<span class="mdx-switch"><span class="colored-text">Paint it Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
 
@@ -160,6 +156,6 @@ hide:
   });
 </script>
 
-???+ colored-amt "<span class="colored-text">Out of the Box</span>"
+### Mark It Down
 
-    WIP
+### Out-of-the-Box
