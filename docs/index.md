@@ -28,10 +28,13 @@ hide:
     flex: 1;
   }
 
-  .combined h1,
-  blockquote {
+  .combined h1, blockquote {
     margin: 0;
     padding: 0;
+  }
+
+  .combined blockquote {
+    opacity: 0.5;
   }
 
   .mdx-switch button {
@@ -74,7 +77,7 @@ hide:
   </div>
 </div>
 
-???+ colored-amt "<span class="mdx-switch"><span class="colored-text">Choosing a Color</span>&emsp;<button data-md-color-primary="turquoise"><code>clear</code></button></span>"
+???+ colored-amt "<span class="mdx-switch"><span class="colored-text">Paint it Pretty</span>&emsp;<button data-md-color-primary="turquoise"><code>clear</code></button></span>"
 
 	<div class="mdx-switch">
 	<button data-md-color-primary="red"><code>red</code></button>
@@ -98,6 +101,7 @@ hide:
 	<button data-md-color-primary="blue-grey"><code>blue grey</code></button>
 	<button data-md-color-primary="black"><code>black</code></button>
 	<button data-md-color-primary="white"><code>white</code></button>
+        <code>and more...</code>
 	</div>
 
 <script>
@@ -109,3 +113,5 @@ buttons.forEach(function(button) {
 	})
 })
 </script>
+
+
