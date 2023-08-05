@@ -81,7 +81,7 @@ hide:
 
     WIP
 
-???+ colored-amt "<span class="mdx-switch"><span class="colored-text">Paint it Pretty</span>&emsp;<button data-md-color-primary="turquoise"><code>clear</code></button></span>"
+???+ colored-amt "<span class="mdx-switch"><span class="colored-text">Paint it Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
 
     <div class="mdx-switch">
         <button data-md-color-primary="red"><code>red</code></button>
