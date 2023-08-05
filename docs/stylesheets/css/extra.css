@@ -24,7 +24,6 @@ code {
 .md-typeset .admonition.colored-amt,
 .md-typeset details.colored-amt {
   border-color: var(--md-primary-fg-color--auto);
-  background-color: transparent;
 }
 
 .md-typeset .colored-amt > .admonition-title,
