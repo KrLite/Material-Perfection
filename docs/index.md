@@ -6,8 +6,8 @@ hide:
 
 <style>
   .bg {
-    height: 75vh;
     top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     position: absolute;
@@ -141,9 +141,11 @@ hide:
 -->
 
 <div class="container combined">
-  <div class="full-absolute">
-    <div class="fit-absolute">
-      <img class="bg-img parallax" src="assets/images/background.png" />
+  <div class="bg">
+    <div class="full-absolute">
+      <div class="fit-absolute">
+        <img class="bg-img parallax" src="assets/images/background.png" />
+      </div>
     </div>
   </div>
   <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
