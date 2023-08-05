@@ -15,4 +15,4 @@
 
 # Material Perfection
 
-> An Out-of-the-box Repository that Toggles [mkdocs-material](https://github.com/squidfunk/mkdocs-material) to the Perfection.&emsp;[`Preview →`](https://krlite.github.io/Material-Perfection)
+> An Out-of-the-Box Repository that Toggles [mkdocs-material](https://github.com/squidfunk/mkdocs-material) to the Perfection.&emsp;[`Preview →`](https://krlite.github.io/Material-Perfection)
