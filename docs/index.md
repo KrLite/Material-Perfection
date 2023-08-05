@@ -141,7 +141,7 @@ hide:
 -->
 
 <div class="container combined">
-  <div class="full-relative">
+  <div class="full-absolute">
     <div class="fit-absolute">
       <img class="bg-img parallax" src="assets/images/background.png" />
     </div>
