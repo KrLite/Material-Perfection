@@ -2,25 +2,22 @@
 
 <style>
 .parallax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 2px solid red; /* Debug border */
+  position: relative;
   height: 400px; /* Adjust the height as needed */
+  overflow: hidden;
 }
 
-.parallax-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid blue; /* Debug border */
-  height: 100%; /* Take full height of the parent element */
+.parallax:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ff0000; /* Replace with your desired color */
+  transform: translateZ(-1px) scale(1.5);
+  z-index: -1;
 }
 </style>
 
-<div class="parallax" style="background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926');">
-  <div class="parallax-inner">
-    This is the content of your parallax section.
-  </div>
-</div>
+This is the content of your page below the parallax section.
