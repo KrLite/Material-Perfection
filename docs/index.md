@@ -19,7 +19,7 @@ hide:
 
   .divider {
     width: 100%;
-    height: 30vh;
+    height: 300px;
     background-color: transparent;
     border: none;
     margin: 0;
