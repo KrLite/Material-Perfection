@@ -107,7 +107,7 @@ hide:
 </style>
 
 <div>
-  <img class="bg" src="assets/images/background.png" />
+  <img class="bg-img" src="assets/images/background.png" />
   <div class="bg-overlay"></div>
   <div class="bg-gradient"></div>
 </div>
