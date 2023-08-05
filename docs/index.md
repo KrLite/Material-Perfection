@@ -5,7 +5,30 @@ hide:
 ---
 
 <style>
-  .bg {
+  .bg-img {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    z-index: -3;
+  }
+
+  .bg-overlay {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    background-color: var(--md-primary-fg-color--auto);
+    opacity: .3;
+    z-index: -2;
+    mix-blend-mode: multiply;
+  }
+
+  .bg-gradient {
     top: 0;
     bottom: 0;
     left: 0;
@@ -16,11 +39,7 @@ hide:
     opacity: .25;
     z-index: -1;
   }
-
-  .bg img {
-    z-index: -2;
-  }
-
+	
   .divider {
     width: 100%;
     height: 300px;
@@ -87,12 +106,10 @@ hide:
   }
 </style>
 
-<div class="bg">
-  <span class="colored" style="-webkit-mask-image: url('assets/images/background.png);">
-    <img
-      src="assets/images/background.png"
-    />
-  </span>
+<div>
+  <img class="bg" src="assets/images/background.png" />
+  <div class="bg-overlay"></div>
+  <div class="bg-gradient"></div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
@@ -111,9 +128,9 @@ hide:
 </script>
 
 <div class="container combined">
-  <span class="colored" style="-webkit-mask-image: url('assets/images/background.png');">
+  <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
 	<img
-      src="assets/images/background.png"
+      src="assets/images/logo.png"
       alt="Material Perfection"
     />
    </span>
