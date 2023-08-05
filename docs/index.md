@@ -30,7 +30,7 @@ hide:
     position: absolute;
     margin: auto;
     background: linear-gradient(7deg, var(--md-primary-fg-color--auto), 32%, transparent);
-    opacity: .8;
+    opacity: .2;
     z-index: -1;
     mix-blend-mode: multiply;
   }
@@ -102,7 +102,7 @@ hide:
 </style>
 
 <div class="bg">
-  <img src="assets/images/background.png" />
+  <img class="parallax" src="assets/images/background.png" />
   <div class="bg-gradient"></div>
 </div>
 
