@@ -9,6 +9,10 @@ hide:
     opacity: .5;
   }
 
+  .sink {
+	transform: translateY(-1.5em);
+  }
+
   .divider {
     height: 3em;
     width: 100%;
@@ -102,7 +106,7 @@ hide:
     </span>
     <div class="content-flex">
       <h1>Material Perfection</h1>
-      <blockquote class="translucent">
+      <blockquote class="translucent sink">
         An Out-of-the-Box Repository that Toggles <a href="https://github.com/squidfunk/mkdocs-material">mkdocs-material</a> to the Perfection.
       </blockquote>
     </div>
