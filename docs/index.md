@@ -90,7 +90,6 @@ hide:
 <div class="bg">
   <span class="colored" style="-webkit-mask-image: url('assets/images/joakim-nadell-K67sBVqLLuw-unsplash.jpg');">
     <img
-      class="parallax"
       src="assets/images/joakim-nadell-K67sBVqLLuw-unsplash.jpg"
     />
   </span>
