@@ -98,12 +98,12 @@ hide:
 </style>
 
 <script>
-  var buttons = document.querySelectorAll("button[data-md-color-primary]")
+  var buttons = document.querySelectorAll("button[data-md-color-primary]");
   buttons.forEach(function(button) {
 	button.addEventListener("click", function() {
 	var attr = this.getAttribute("data-md-color-primary")
 	document.body.setAttribute("data-md-color-primary", attr)
-	})
+	});
   });
 
   var images = document.querySelectorAll('.parallax');
