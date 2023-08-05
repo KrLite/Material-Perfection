@@ -1,40 +1,40 @@
-<script>
-  .div {
-    border: 1px solid red;
-  }
+  <style>
+    #div1 {
+      position: relative;
+      height: 500px; /* Adjust as needed */
+      border: 2px solid red; /* Added red border for testing */
+    }
+  
+    #div2 {
+      position: fixed;
+      bottom: 0;
+      transform: translateY(100%); /* Initially positioned below the viewport */
+      transition: transform 0.3s ease; /* Smooth transition */
+      border: 2px solid red; /* Added red border for testing */
+    }
+  </style>
+  <div id="div1">
+    <p>Content of div1</p>
+    <p>Additional paragraph</p>
+  </div>
 
-  window.addEventListener('scroll', function() {
-  var div1 = document.getElementById('div1');
-  var div2 = document.getElementById('div2');
-  var scrollPosition = window.scrollY;
+  <div id="div2">
+    <p>Content of div2</p>
+  </div>
 
-  var div1BottomPosition = div1.offsetTop + div1.offsetHeight;
-  var distanceFromViewportBottom = window.innerHeight - div1BottomPosition;
+  <script>
+    window.addEventListener('scroll', function() {
+      var div1 = document.getElementById('div1');
+      var div2 = document.getElementById('div2');
+      var scrollPosition = window.scrollY;
 
-  var translation = Math.max(0, distanceFromViewportBottom - scrollPosition);
+      // Calculate the distance between div1 and the bottom of the viewport
+      var div1BottomPosition = div1.offsetTop + div1.offsetHeight;
+      var distanceFromViewportBottom = window.innerHeight - div1BottomPosition;
 
-  div2.style.transform = 'translateY(' + translation + 'px)';
-});
+      // Calculate the translation value for div2
+      var translation = Math.max(0, distanceFromViewportBottom - scrollPosition);
 
-  #div1 {
-  position: relative;
-  height: 150px;
-}
-
-#div2 {
-  position: fixed;
-  bottom: 0;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
-}
-</script>
-
-<div id="div1">
-  <!-- Content of div1 -->
-  P1
-</div>
-
-<div id="div2">
-  <!-- Content of div2 -->
-  P2
-</div>
+      div2.style.transform = 'translateY(' + translation + 'px)';
+    });
+  </script>
