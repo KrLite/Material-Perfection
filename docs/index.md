@@ -44,7 +44,7 @@ hide:
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    height: calc(75vh - 10em);
+    height: calc(75vh - 5em);
     align-items: flex-start;
     justify-content: flex-start;
   }
