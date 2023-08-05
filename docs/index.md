@@ -88,9 +88,9 @@ hide:
 </style>
 
 <div class="bg">
-  <span class="colored" style="-webkit-mask-image: url('assets/images/joakim-nadell-K67sBVqLLuw-unsplash.jpg');">
+  <span class="colored" style="-webkit-mask-image: url('assets/images/background.png);">
     <img
-      src="assets/images/joakim-nadell-K67sBVqLLuw-unsplash.jpg"
+      src="assets/images/background.png"
     />
   </span>
 </div>
