@@ -6,8 +6,8 @@
     />
     <img
       align="left"
-      height="150"
-      width="150"
+      height="130"
+      width="130"
       src="/docs/assets/images/logo.png?raw=true"
     />
   </picture>
