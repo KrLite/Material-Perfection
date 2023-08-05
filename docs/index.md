@@ -19,13 +19,20 @@ hide:
     opacity: .1;
   }
 
-  .container {
+  .title {
     width: 100%;
-    height: 75vh;
+	height: 200vh;
+  }
+
+  .container {
+	top: 55vh;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
+	position: relative;
   }
 
   .combined {
@@ -65,32 +72,44 @@ hide:
   .md-typeset details.colored-amt, .admonition.colored-amt {
     font-size: .9em;
   }
+
+  .rellax-space {
+	height: 25vh;
+  }
+
+  .huge-space {
+	height: 300vh;
+  }
+
+  .parallax-dispatch {
+	position: sticky;
+	position: -webkit-sticky;
+	top: 5em;
+  }
+
+  .animated {
+    transition: opacity 0.3s, top 0.3s;
+  }
 </style>
 
-<!--
-<div class="bg">
-  <div class="full-relative bg-gradient"></div>
-  <div class="overflow-relative fg-gradient"></div>
-  <div class="full-absolute overlay-gradient"></div>
-</div>
--->
-
-<section class="container">
-  <span class="colored combined" style="-webkit-mask-image: url('assets/images/logo.png');">
-  <img
-      src="assets/images/logo.png"
-      alt="Material Perfection"
-    />
-  </span>
-  <div class="content-flex">
-    <h1>Material Perfection</h1>
-    <blockquote class="translucent">
-      An Out-of-the-Box Repository that Toggles <a href="https://github.com/squidfunk/mkdocs-material">mkdocs-material</a> to the Perfection.
-    </blockquote>
+<section class="title">
+  <div class="container rellax fade blur" data-rellax-speed="-5" data-fade-offset="120" data-fade-duration-multiplier="0.45" data-blur-radius="32">
+    <span class="colored combined" style="-webkit-mask-image: url('assets/images/logo.png');">
+      <img
+          src="assets/images/logo.png"
+          alt="Material Perfection"
+       />
+    </span>
+    <div class="content-flex">
+      <h1>Material Perfection</h1>
+      <blockquote class="translucent">
+        An Out-of-the-Box Repository that Toggles <a href="https://github.com/squidfunk/mkdocs-material">mkdocs-material</a> to the Perfection.
+      </blockquote>
+    </div>
   </div>
 </section>
 
-# Mark It Down
+<h1 class="animated fade blur shift" data-fade-offset="120" data-fade-duration="200" data-blur-radius="4" data-shift-duration="-32">Mark It Down</h1>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
 euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
@@ -105,8 +124,11 @@ purus auctor massa, nec semper lorem quam in massa.
 Lorem ipsum.
 
 <div class="divider"></div>
+<div class="rellax-space"></div>
 
-???+ colored-amt inline end "<span class="mdx-switch"><span class="colored-text">Paint It Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
+<h1 class="animated fade blur shift" data-fade-offset="120" data-fade-duration="200" data-blur-radius="4" data-shift-duration="-32">Deep Customization</h1>
+
+???+ colored-amt inline end "<span class="mdx-switch rellax" data-rellax-speed="5"><span class="colored-text">Paint It Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
 
     <div class="mdx-switch">
         <button data-md-color-primary="red"><code>red</code></button>
@@ -143,7 +165,17 @@ Lorem ipsum.
 	});
 </script>
 
-# Deep Customization
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
+euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
+purus auctor massa, nec semper lorem quam in massa.
+
+Lorem ipsum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
+euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
+purus auctor massa, nec semper lorem quam in massa.
+
+Lorem ipsum.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
 euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
@@ -158,8 +190,15 @@ purus auctor massa, nec semper lorem quam in massa.
 Lorem ipsum.
 
 <div class="divider"></div>
+<div class="rellax-space"></div>
 
-# Out-of-the-Box
+<h1 class="animated fade blur shift" data-fade-offset="120" data-fade-duration="200" data-blur-radius="4" data-shift-duration="-32">Out-of-the-Box</h1>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
+euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
+purus auctor massa, nec semper lorem quam in massa.
+
+Lorem ipsum.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
 euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
@@ -167,8 +206,65 @@ purus auctor massa, nec semper lorem quam in massa.
 
 Lorem ipsum.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
-euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
-purus auctor massa, nec semper lorem quam in massa.
+<div class="huge-space"></div>
 
-Lorem ipsum.
+<script src="javascripts/rellax.min.js"></script>
+<script>
+	var rellax = new Rellax(".rellax");
+</script>
+
+<script>
+  function getElementFadingPercentage(el) {
+	offset = el.getAttribute('data-fade-offset') || 0;
+	duration = el.getAttribute('data-fade-duration') || window.innerHeight;
+	multiplier = el.getAttribute('data-fade-duration-multiplier') || 1;
+
+    var rect = el.getBoundingClientRect();
+	var screenCssPixelRatio = (window.outerWidth - 8) / window.innerWidth;
+    return Math.min(Math.max(rect.top - offset, 0) / (duration * multiplier) * screenCssPixelRatio, 1);
+  }
+
+  function handleFade() {
+    var elements = document.getElementsByClassName('fade');
+
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      element.style.opacity = getElementFadingPercentage(element);
+    }
+  }
+
+  function handleBlur() {
+    var elements = document.getElementsByClassName('blur');
+
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+	  radius = Math.pow(1 - getElementFadingPercentage(element), 2) * (element.getAttribute('data-blur-radius') || 16);
+
+      element.style.filter = `blur(${radius}px)`;
+      element.style.webkitFilter = `blur(${radius}px)`;
+    }
+  }
+
+  function handleShift() {
+    var elements = document.getElementsByClassName('shift');
+
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+	  duration = (1 - getElementFadingPercentage(element)) * (element.getAttribute('data-shift-duration') || window.innerHeight);
+	  multiplier = element.getAttribute('data-shift-duration-multiplier') || 1;
+
+      element.style.transform = `translateY(${duration * multiplier}px)`;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+	handleFade();
+	handleBlur();
+	handleShift();
+  });
+  window.addEventListener('scroll', function() {
+	handleFade();
+	handleBlur();
+	handleShift();
+  });
+</script>

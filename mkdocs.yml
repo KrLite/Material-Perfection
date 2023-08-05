@@ -6,7 +6,6 @@ strict: false
 # Contents
 nav:
   - Landing: index.md
-  - Test: test.md
 
 # Theme
 theme:

@@ -49,7 +49,7 @@ CSS file to control global colors
 /* Credit: https://stackoverflow.com/a/76821538 */
 .colored {
   display: inline-block;
-  background-color: var(--md-primary-fg-color);
+  background-color: var(--md-primary-fg-color--auto);
   -webkit-mask-size: 95%;
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
