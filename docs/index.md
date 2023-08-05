@@ -108,7 +108,7 @@ hide:
         <code>and more...</code>
     </div>
 
-???+ Out of the Box
+???+ colored-amt "Out of the Box"
 
     WIP
 
