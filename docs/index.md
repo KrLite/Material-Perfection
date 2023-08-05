@@ -97,6 +97,19 @@ hide:
   }
 </style>
 
+<script>
+  var buttons = document.querySelectorAll("button[data-md-color-primary]")
+  buttons.forEach(function(button) {
+	button.addEventListener("click", function() {
+	var attr = this.getAttribute("data-md-color-primary")
+	document.body.setAttribute("data-md-color-primary", attr)
+	})
+  });
+
+  var images = document.querySelectorAll('.parallax');
+  new simpleParallax(images);
+</script>
+
 <div class="bg">
   <div class="fit">
     <img class="parallax" src="assets/images/background.png" />
@@ -105,11 +118,6 @@ hide:
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
-
-<script>
-  var images = document.querySelectorAll('.parallax');
-  new simpleParallax(images);
-</script>
 
 <div class="container combined">
   <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
@@ -156,16 +164,6 @@ hide:
 	<button data-md-color-primary="white"><code>white</code></button>
         <code>and more...</code>
     </div>
-
-<script>
-var buttons = document.querySelectorAll("button[data-md-color-primary]")
-buttons.forEach(function(button) {
-	button.addEventListener("click", function() {
-	var attr = this.getAttribute("data-md-color-primary")
-	document.body.setAttribute("data-md-color-primary", attr)
-	})
-})
-</script>
 
 ???+ colored-amt "<span class="colored-text">Out of the Box</span>"
 
