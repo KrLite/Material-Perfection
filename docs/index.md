@@ -13,6 +13,10 @@ hide:
 	transform: translateY(-1.5em);
   }
 
+  .smooth {
+    transition: transform 0.1s ease;
+  }
+
   .divider {
     height: 3em;
     width: 100%;
@@ -78,26 +82,36 @@ hide:
   }
 
   .rellax-space {
-	height: 25vh;
+    height: 25vh;
   }
 
   .huge-space {
-	height: 300vh;
+    height: 300vh;
   }
 
-  .parallax {
-	filter: blur(calc(max(0, 1 - var(--mdx-parallax)) * 12px));
-	transform: translateY(calc((1 - var(--mdx-parallax)) * 100px));
-	transition: transform 0.1s ease;
+  .parallax-blur {
+    filter: blur(calc(max(0, 1 - var(--mdx-parallax)) * 12px));
+  }
+
+  .parallax-blur-s {
+    filter: blur(calc(max(0, 1 - var(--mdx-parallax)) * 4px));
+  }
+
+  .parallax-shift {
+    transform: translateY(calc((1 - var(--mdx-parallax)) * 30vh));
+  }
+
+  .parallax-shift-s {
+    transform: translateY(calc((1 - var(--mdx-parallax)) * -100px));
   }
 </style>
 
 <section class="title">
-  <div class="container parallax" data-rellax-speed="-5" data-mdx-parallax-end="50%">
+  <div class="container parallax-shift parallax-blur" parallax-start="10%" data-mdx-parallax-end="50%">
     <span class="colored combined" style="-webkit-mask-image: url('assets/images/logo.png');">
       <img
-          src="assets/images/logo.png"
-          alt="Material Perfection"
+        src="assets/images/logo.png"
+        alt="Material Perfection"
        />
     </span>
     <div class="content-flex">
@@ -109,7 +123,7 @@ hide:
   </div>
 </section>
 
-<h1 class="parallax" data-mdx-parallax-end="50%">Mark It Down</h1>
+<h1 class="parallax-shift-s parallax-blur-s" data-mdx-parallax-start="10%" data-mdx-parallax-end="25%">Mark It Down</h1>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
 euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
@@ -126,7 +140,7 @@ Lorem ipsum.
 <div class="divider"></div>
 <div class="rellax-space"></div>
 
-<h1>Deep Customization</h1>
+<h1 class="parallax-shift-s parallax-blur-s" data-mdx-parallax-start="10%" data-mdx-parallax-end="25%">Deep Customization</h1>
 
 ???+ colored-amt inline end "<span class="mdx-switch rellax" data-rellax-speed="5"><span class="colored-text">Paint It Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
 
@@ -192,7 +206,7 @@ Lorem ipsum.
 <div class="divider"></div>
 <div class="rellax-space"></div>
 
-<h1>Out-of-the-Box</h1>
+<h1 class="parallax-shift-s parallax-blur-s" data-mdx-parallax-start="10%" data-mdx-parallax-end="25%">Out-of-the-Box</h1>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
 euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
