@@ -107,7 +107,7 @@ hide:
 </style>
 
 <section class="title">
-  <div class="container parallax smooth parallax-shift parallax-blur" parallax-start="50%" data-mdx-parallax-end="10%">
+  <div class="container parallax smooth parallax-shift parallax-blur" parallax-start="10%" data-mdx-parallax-end="50%">
     <span class="colored combined" style="-webkit-mask-image: url('assets/images/logo.png');">
       <img
         src="assets/images/logo.png"
