@@ -81,7 +81,7 @@ hide:
     font-size: .9em;
   }
 
-  .rellax-space {
+  .para-space {
     height: 25vh;
   }
 
@@ -107,7 +107,7 @@ hide:
 </style>
 
 <section class="title">
-  <div class="container parallax-shift parallax-blur" parallax-start="10%" data-mdx-parallax-end="50%">
+  <div class="container smooth parallax-shift parallax-blur" parallax-start="10%" data-mdx-parallax-end="50%">
     <span class="colored combined" style="-webkit-mask-image: url('assets/images/logo.png');">
       <img
         src="assets/images/logo.png"
@@ -123,7 +123,7 @@ hide:
   </div>
 </section>
 
-<h1 class="parallax-shift-s parallax-blur-s" data-mdx-parallax-start="10%" data-mdx-parallax-end="25%">Mark It Down</h1>
+<h1 class="smooth parallax-shift-s parallax-blur-s" data-mdx-parallax-start="10%" data-mdx-parallax-end="25%">Mark It Down</h1>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
 euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
@@ -138,9 +138,9 @@ purus auctor massa, nec semper lorem quam in massa.
 Lorem ipsum.
 
 <div class="divider"></div>
-<div class="rellax-space"></div>
+<div class="para-space"></div>
 
-<h1 class="parallax-shift-s parallax-blur-s" data-mdx-parallax-start="10%" data-mdx-parallax-end="25%">Deep Customization</h1>
+<h1 class="smooth parallax-shift-s parallax-blur-s" data-mdx-parallax-start="10%" data-mdx-parallax-end="25%">Deep Customization</h1>
 
 ???+ colored-amt inline end "<span class="mdx-switch rellax" data-rellax-speed="5"><span class="colored-text">Paint It Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
 
@@ -204,9 +204,9 @@ purus auctor massa, nec semper lorem quam in massa.
 Lorem ipsum.
 
 <div class="divider"></div>
-<div class="rellax-space"></div>
+<div class="para-space"></div>
 
-<h1 class="parallax-shift-s parallax-blur-s" data-mdx-parallax-start="10%" data-mdx-parallax-end="25%">Out-of-the-Box</h1>
+<h1 class="smooth parallax-shift-s parallax-blur-s" data-mdx-parallax-start="10%" data-mdx-parallax-end="25%">Out-of-the-Box</h1>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
 euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
