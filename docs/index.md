@@ -123,7 +123,7 @@ hide:
   </div>
 </section>
 
-<h1 class="smooth parallax parallax-shift-s parallax-blur-s" data-mdx-parallax-start="10%" data-mdx-parallax-end="90%" data-mdx-parallax-bezier="cubic-bezier(0.4, 0, 0.6, 1)">Mark It Down</h1>
+<h1 class="smooth parallax parallax-shift-s parallax-blur-s" data-mdx-parallax-start="10%" data-mdx-parallax-end="90%" data-mdx-parallax-bezier="cubic-bezier(0.33, 0, 0.67, 1)">Mark It Down</h1>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
 euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
@@ -140,7 +140,7 @@ Lorem ipsum.
 <div class="divider"></div>
 <div class="para-space"></div>
 
-<h1 class="smooth parallax parallax-shift-s parallax-blur-s" data-mdx-parallax-start="10%" data-mdx-parallax-end="90%">Deep Customization</h1>
+<h1 class="smooth parallax parallax-shift-s parallax-blur-s" data-mdx-parallax-start="10%" data-mdx-parallax-end="90%" data-mdx-parallax-bezier="cubic-bezier(0.33, 0, 0.67, 1)">Deep Customization</h1>
 
 ???+ colored-amt inline end "<span class="mdx-switch rellax" data-rellax-speed="5"><span class="colored-text">Paint It Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
 
@@ -206,7 +206,7 @@ Lorem ipsum.
 <div class="divider"></div>
 <div class="para-space"></div>
 
-<h1 class="smooth parallax parallax-shift-s parallax-blur-s" data-mdx-parallax-start="10%" data-mdx-parallax-end="90%">Out-of-the-Box</h1>
+<h1 class="smooth parallax parallax-shift-s parallax-blur-s" data-mdx-parallax-start="10%" data-mdx-parallax-end="90%" data-mdx-parallax-bezier="cubic-bezier(0.33, 0, 0.67, 1)">Out-of-the-Box</h1>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
 euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
