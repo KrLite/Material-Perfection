@@ -1,5 +1,5 @@
 function handleParallax() {
-  var elements = document.getElementsByClassName("parallax");
+  var elements = document.getElementsByClassName("mdx-parallax");
 
   Array.from(elements).forEach((element) => {
     var start = element.getAttribute("data-mdx-parallax-start") || "0%";

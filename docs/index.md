@@ -5,6 +5,22 @@ hide:
 ---
 
 <style>
+  .md-tabs {
+	background-color: transparent;
+	background: linear-gradient(rgba(0, 0, 0, .3), 30%, transparent);
+  }
+
+  .overlay {
+    top: 0;
+	bottom: 0;
+    left: 0;
+	right: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+  }
+
   .translucent {
     opacity: .5;
   }
@@ -17,6 +33,10 @@ hide:
     transition: transform 0.1s ease;
   }
 
+  .ghost {
+	pointer-events: none;
+  }
+
   .divider {
     height: 3em;
     width: 100%;
@@ -27,9 +47,22 @@ hide:
     opacity: .1;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+	font-family: "Ogg";
+  }
+
   .title {
     width: 100%;
-	  height: 225vh;
+	height: 120vh;
+  }
+
+  .title-span {
+	top: 0;
+	left: 0;
+	right: 0;
+    width: 100%;
+	height: 120vh;
+	position: absolute;
   }
 
   .container {
@@ -77,73 +110,97 @@ hide:
     color: var(--md-primary-fg-color--auto);
   }
 
-  .md-typeset details.colored-amt, .admonition.colored-amt {
+  .md-typeset details.palette, .admonition.palette {
     font-size: .9em;
   }
 
-  .para-space {
-    height: 25vh;
-  }
-
-  .huge-space {
-    height: 300vh;
-  }
-
-  .bg-logo-1 {
-	left: -6vw;
-	top: 248vh;
-	width: 65%;
-	position: absolute;
-	opacity: .1;
-	filter: blur(27px);
-	will-change: transform;
-  }
-
-  .bg-logo-2 {
-	left: 49vw;
-	top: 252vh;
-	width: 23%;
-	position: absolute;
-	opacity: .2;
-	filter: blur(8px);
-	will-change: transform;
-  }
-
-  .bg-logo-3 {
-	left: 15vw;
-	top: 334vh;
-	width: 101%;
-	position: absolute;
-	opacity: .2;
-	filter: blur(32px);
-	will-change: transform;
-  }
-
-  .parallax-blur {
-    filter: blur(calc(max(0, var(--mdx-parallax)) * 12px));
-	will-change: transform; /* Fix rendering issues on Safari  */
-  }
-
-  .parallax-blur-s {
+  .mdx-parallax-blur {
     filter: blur(calc(max(0, var(--mdx-parallax)) * 4px));
 	will-change: transform;
   }
 
-  .parallax-shift {
-    transform: translateY(calc(max(0, min(1, var(--mdx-parallax))) * 60vh));
-  }
-
-  .parallax-shift-s {
+  .mdx-parallax-shift {
     transform: translateY(calc(max(0, min(1, var(--mdx-parallax))) * -3vh));
   }
 
-  .parallax-fade {
-	opacity: calc(1 - var(--mdx-parallax));
+  .mdx-parallax-fade {
+    opacity: calc(1 - var(--mdx-parallax));
+  }
+
+  *{
+    box-sizing: border-box;
+  }
+
+  .parallax {
+    perspective: 100px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+	right: 0;
+    margin-left: -750px;
+	margin-right: -750px;
+  }
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .parallax__layer img {
+    display: block;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .parallax__cover {
+    background: #2D112B;
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 2000px;
+    z-index: 2;
+  }
+
+  .parallax__layer__0 {
+    transform: translateZ(-300px) scale(4);
+  }
+
+  .parallax__layer__1 {
+    transform: translateZ(-250px) scale(3.5);
+  }
+
+  .parallax__layer__2 {
+    transform: translateZ(-200px) scale(3);
+  }
+
+  .parallax__layer__3 {
+    transform: translateZ(-150px) scale(2.5);
+  }
+
+  .parallax__layer__4 {
+    transform: translateZ(-100px) scale(2);
+  }
+
+  .parallax__layer__5 {
+    transform: translateZ(-50px) scale(1.5);
+  }
+
+  .parallax__layer__6 {
+    transform: translateZ(0px) scale(1);
   }
 </style>
 
 <section class="title">
-  <div class="container parallax smooth parallax-shift parallax-blur parallax-fade" data-mdx-parallax-start="55%" data-mdx-parallax-end="10%">
+  <div class="container parallax parallax-blur parallax-fade" data-mdx-parallax-start="55%" data-mdx-parallax-end="10%">
     <span class="colored combined" style="-webkit-mask-image: url('assets/images/logo.png');">
       <img
         src="assets/images/logo.png"
@@ -159,7 +216,33 @@ hide:
   </div>
 </section>
 
-<section>
+<section class="parallax">
+  <div class="parallax__layer parallax__layer__0">
+    <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_0.png?raw=true" />
+  </div>
+  <div class="parallax__layer parallax__layer__1">
+    <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_1.png?raw=true" />
+  </div>
+  <div class="parallax__layer parallax__layer__2">
+    <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_2.png?raw=true" />
+  </div>
+  <div class="parallax__layer parallax__layer__3">
+    <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_3.png?raw=true" />
+  </div>
+  <div class="parallax__layer parallax__layer__4">
+    <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_4.png?raw=true" />
+  </div>
+  <div class="parallax__layer parallax__layer__5">
+    <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_5.png?raw=true" />
+  </div>
+  <div class="parallax__layer parallax__layer__6">
+    <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_6.png?raw=true" />
+  </div>
+  <div class="parallax__cover"></div>
+</section>
+
+<!--
+<section class="overlay ghost">
   <div class="rellax smooth bg-logo-1" data-rellax-speed="-1">
     <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
       <img src="assets/images/logo.png" />
@@ -176,8 +259,9 @@ hide:
     </span>
   </div>
 </section>
+-->
 
-<h1 class="smooth parallax parallax-shift-s parallax-blur-s parallax-fade" data-mdx-parallax-start="30%" data-mdx-parallax-end="5%" data-mdx-parallax-bezier="cubic-bezier(.17, .84, .44, 1)" id="title">Mark It Down</h1>
+<h1 class="smooth mdx-parallax mdx-parallax-shift mdx-parallax-blur mdx-parallax-fade" data-mdx-parallax-start="23%" data-mdx-parallax-end="5%" data-mdx-parallax-bezier="cubic-bezier(.17, .84, .44, 1)" id="title">Mark It Down</h1>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
 euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
@@ -194,9 +278,9 @@ Lorem ipsum.
 <div class="divider"></div>
 <div class="para-space"></div>
 
-<h1 class="smooth parallax parallax-shift-s parallax-blur-s parallax-fade" data-mdx-parallax-start="30%" data-mdx-parallax-end="5%" data-mdx-parallax-bezier="cubic-bezier(.17, .84, .44, 1)">Deep Customization</h1>
+<h1 class="smooth mdx-parallax mdx-parallax-shift mdx-parallax-blur mdx-parallax-fade" data-mdx-parallax-start="23%" data-mdx-parallax-end="5%" data-mdx-parallax-bezier="cubic-bezier(.17, .84, .44, 1)">Deep Customization</h1>
 
-???+ colored-amt inline end "<span class="mdx-switch"><span class="colored-text">Paint It Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
+???+ palette inline end "<span class="mdx-switch"><span class="colored-text">Paint It Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
 
     <div class="mdx-switch">
         <button data-md-color-primary="red"><code>red</code></button>
@@ -260,7 +344,7 @@ Lorem ipsum.
 <div class="divider"></div>
 <div class="para-space"></div>
 
-<h1 class="smooth parallax parallax-shift-s parallax-blur-s parallax-fade" data-mdx-parallax-start="30%" data-mdx-parallax-end="5%" data-mdx-parallax-bezier="cubic-bezier(.17, .84, .44, 1)">Out-of-the-Box</h1>
+<h1 class="smooth mdx-parallax mdx-parallax-shift mdx-parallax-blur mdx-parallax-fade" data-mdx-parallax-start="23%" data-mdx-parallax-end="5%" data-mdx-parallax-bezier="cubic-bezier(.17, .84, .44, 1)">Out-of-the-Box</h1>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
 euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
@@ -274,7 +358,7 @@ purus auctor massa, nec semper lorem quam in massa.
 
 Lorem ipsum.
 
-<div class="huge-space"></div>
+<div class="ending-space"></div>
 
 <script src="javascripts/rellax.min.js"></script>
 <script>

@@ -6,6 +6,7 @@ strict: false
 # Contents
 nav:
   - Landing: index.md
+  - Test: test.md
 
 # Theme
 theme:
@@ -84,8 +85,8 @@ extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css
   - stylesheets/extra.css # Optimize general appearances
   - stylesheets/colors.css # Control global colors
-  - stylesheets/font.css # Change the fonts
-  - stylesheets/colored_headings.css # Color the headings
+  - stylesheets/font.css # Define the fonts
+  - stylesheets/headings.css # Make the headings prettier
 
 # Plugins
 plugins:
