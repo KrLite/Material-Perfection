@@ -29,7 +29,7 @@ hide:
 
   .title {
     width: 100%;
-	  height: 200vh;
+	  height: 225vh;
   }
 
   .container {
@@ -89,25 +89,61 @@ hide:
     height: 300vh;
   }
 
+  .bg-logo-1 {
+	left: -6vw;
+	top: 248vh;
+	width: 65%;
+	position: absolute;
+	opacity: .1;
+	filter: blur(27px);
+	will-change: transform;
+  }
+
+  .bg-logo-2 {
+	left: 49vw;
+	top: 252vh;
+	width: 23%;
+	position: absolute;
+	opacity: .2;
+	filter: blur(8px);
+	will-change: transform;
+  }
+
+  .bg-logo-3 {
+	left: 15vw;
+	top: 334vh;
+	width: 101%;
+	position: absolute;
+	opacity: .2;
+	filter: blur(32px);
+	will-change: transform;
+  }
+
   .parallax-blur {
     filter: blur(calc(max(0, var(--mdx-parallax)) * 12px));
+	will-change: transform; /* Fix rendering issues on Safari  */
   }
 
   .parallax-blur-s {
     filter: blur(calc(max(0, var(--mdx-parallax)) * 4px));
+	will-change: transform;
   }
 
   .parallax-shift {
-    transform: translateY(calc(max(0, var(--mdx-parallax)) * 50px));
+    transform: translateY(calc(max(0, min(1, var(--mdx-parallax))) * 60vh));
   }
 
   .parallax-shift-s {
-    transform: translateY(calc(var(--mdx-parallax) * -4em));
+    transform: translateY(calc(max(0, min(1, var(--mdx-parallax))) * -3vh));
+  }
+
+  .parallax-fade {
+	opacity: calc(1 - var(--mdx-parallax));
   }
 </style>
 
 <section class="title">
-  <div class="container parallax smooth parallax-shift parallax-blur" parallax-start="10%" data-mdx-parallax-end="50%">
+  <div class="container parallax smooth parallax-shift parallax-blur parallax-fade" data-mdx-parallax-start="55%" data-mdx-parallax-end="10%">
     <span class="colored combined" style="-webkit-mask-image: url('assets/images/logo.png');">
       <img
         src="assets/images/logo.png"
@@ -123,7 +159,25 @@ hide:
   </div>
 </section>
 
-<h1 class="smooth parallax parallax-shift-s parallax-blur-s" data-mdx-parallax-start="90%" data-mdx-parallax-end="10%" data-mdx-parallax-bezier="cubic-bezier(.17, .84, .44, 1)">Mark It Down</h1>
+<section>
+  <div class="rellax smooth bg-logo-1" data-rellax-speed="-1">
+    <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
+      <img src="assets/images/logo.png" />
+    </span>
+  </div>
+  <div class="rellax smooth bg-logo-2" data-rellax-speed="-3">
+    <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
+      <img src="assets/images/logo.png" />
+    </span>
+  </div>
+  <div class="rellax smooth bg-logo-3" data-rellax-speed="-2">
+    <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
+      <img src="assets/images/logo.png" />
+    </span>
+  </div>
+</section>
+
+<h1 class="smooth parallax parallax-shift-s parallax-blur-s parallax-fade" data-mdx-parallax-start="30%" data-mdx-parallax-end="5%" data-mdx-parallax-bezier="cubic-bezier(.17, .84, .44, 1)" id="title">Mark It Down</h1>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
 euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
@@ -140,9 +194,9 @@ Lorem ipsum.
 <div class="divider"></div>
 <div class="para-space"></div>
 
-<h1 class="smooth parallax parallax-shift-s parallax-blur-s" data-mdx-parallax-start="90%" data-mdx-parallax-end="10%" data-mdx-parallax-bezier="cubic-bezier(.17, .84, .44, 1)">Deep Customization</h1>
+<h1 class="smooth parallax parallax-shift-s parallax-blur-s parallax-fade" data-mdx-parallax-start="30%" data-mdx-parallax-end="5%" data-mdx-parallax-bezier="cubic-bezier(.17, .84, .44, 1)">Deep Customization</h1>
 
-???+ colored-amt inline end "<span class="mdx-switch rellax" data-rellax-speed="5"><span class="colored-text">Paint It Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
+???+ colored-amt inline end "<span class="mdx-switch"><span class="colored-text">Paint It Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
 
     <div class="mdx-switch">
         <button data-md-color-primary="red"><code>red</code></button>
@@ -206,7 +260,7 @@ Lorem ipsum.
 <div class="divider"></div>
 <div class="para-space"></div>
 
-<h1 class="smooth parallax parallax-shift-s parallax-blur-s" data-mdx-parallax-start="90%" data-mdx-parallax-end="10%" data-mdx-parallax-bezier="cubic-bezier(.17, .84, .44, 1)">Out-of-the-Box</h1>
+<h1 class="smooth parallax parallax-shift-s parallax-blur-s parallax-fade" data-mdx-parallax-start="30%" data-mdx-parallax-end="5%" data-mdx-parallax-bezier="cubic-bezier(.17, .84, .44, 1)">Out-of-the-Box</h1>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
 euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo

@@ -14,7 +14,7 @@ function handleParallax() {
       end = parsePercentage(end) * window.innerHeight;
     }
 
-	if (start === end) return 0;
+    if (start === end) return 0;
 
     const offset = element.getAttribute("data-mdx-parallax-offset") || 0;
     const bezier = element.getAttribute("data-mdx-parallax-bezier") || null;
@@ -35,6 +35,10 @@ function handleParallax() {
             bezierParams.p3,
             percentage
           );
+
+	if (element.id === "title") {
+		console.log(start, end, rect.top - offset, percentage);
+	}
 
     element.style.setProperty("--mdx-parallax", curve);
   });
