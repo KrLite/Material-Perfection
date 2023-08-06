@@ -96,7 +96,7 @@ title: "Material Perfection"
 	left: 0;
 	right: 0;
 	width: 100%;
-	height: calc(100% - 64px);
+	height: calc(100% - 64px - 200vh);
 	position: absolute;
 	z-index: 2;
   }
