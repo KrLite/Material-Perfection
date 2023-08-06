@@ -29,11 +29,11 @@ hide:
 
   .title {
     width: 100%;
-	height: 200vh;
+	  height: 200vh;
   }
 
   .container {
-	top: 55vh;
+    top: 55vh;
     width: 100%;
     height: auto;
     display: flex;
@@ -98,7 +98,7 @@ hide:
   }
 
   .parallax-shift {
-    transform: translateY(calc((1 - var(--mdx-parallax)) * 60vh));
+    transform: translateY(calc(max(0, 1 - var(--mdx-parallax)) * 60vh));
   }
 
   .parallax-shift-s {
