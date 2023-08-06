@@ -85,19 +85,15 @@ hide:
 	height: 300vh;
   }
 
-  .parallax-dispatch {
-	position: sticky;
-	position: -webkit-sticky;
-	top: 5em;
-  }
-
-  .animated {
-    transition: opacity 0.3s, top 0.3s;
+  .parallax {
+	filter: blur(calc(max(0, 1 - var(--mdx-parallax)) * 12px));
+	transform: translateY(calc((1 - var(--mdx-parallax)) * 100px));
+	transition: transform 0.1s ease;
   }
 </style>
 
 <section class="title">
-  <div class="container rellax fade blur" data-rellax-speed="-5" data-fade-offset="120" data-fade-duration-multiplier="0.45" data-blur-radius="32">
+  <div class="container parallax" data-rellax-speed="-5" data-mdx-parallax-end="50%">
     <span class="colored combined" style="-webkit-mask-image: url('assets/images/logo.png');">
       <img
           src="assets/images/logo.png"
@@ -113,7 +109,7 @@ hide:
   </div>
 </section>
 
-<h1 class="animated fade blur shift" data-fade-offset="120" data-fade-duration="200" data-blur-radius="4" data-shift-duration="-32">Mark It Down</h1>
+<h1 class="parallax" data-mdx-parallax-end="50%">Mark It Down</h1>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
 euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
@@ -130,7 +126,7 @@ Lorem ipsum.
 <div class="divider"></div>
 <div class="rellax-space"></div>
 
-<h1 class="animated fade blur shift" data-fade-offset="120" data-fade-duration="200" data-blur-radius="4" data-shift-duration="-32">Deep Customization</h1>
+<h1>Deep Customization</h1>
 
 ???+ colored-amt inline end "<span class="mdx-switch rellax" data-rellax-speed="5"><span class="colored-text">Paint It Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
 
@@ -196,7 +192,7 @@ Lorem ipsum.
 <div class="divider"></div>
 <div class="rellax-space"></div>
 
-<h1 class="animated fade blur shift" data-fade-offset="120" data-fade-duration="200" data-blur-radius="4" data-shift-duration="-32">Out-of-the-Box</h1>
+<h1>Out-of-the-Box</h1>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
 euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
@@ -215,57 +211,4 @@ Lorem ipsum.
 <script src="javascripts/rellax.min.js"></script>
 <script>
 	var rellax = new Rellax(".rellax");
-</script>
-
-<script>
-  function getElementFadingPercentage(element) {
-	const offset = element.getAttribute('data-fade-offset') || 0;
-	const duration = element.getAttribute('data-fade-duration') || window.innerHeight;
-	const multiplier = element.getAttribute('data-fade-duration-multiplier') || 1;
-
-    var rect = element.getBoundingClientRect();
-	var screenCssPixelRatio = (window.outerWidth - 8) / window.innerWidth;
-    return Math.min(Math.max(rect.top - offset, 0) / (duration * multiplier) * screenCssPixelRatio, 1);
-  }
-
-  function handleFade() {
-    var elements = document.getElementsByClassName('fade');
-
-    Array.from(elements).forEach((element) => {
-      element.style.opacity = getElementFadingPercentage(element);
-    });
-  }
-
-  function handleBlur() {
-    var elements = document.getElementsByClassName('blur');
-
-    Array.from(elements).forEach((element) => {
-	  const radius = Math.pow(1 - getElementFadingPercentage(element), 2) * (element.getAttribute('data-blur-radius') || 16);
-
-      element.style.filter = `blur(${radius}px)`;
-      element.style.webkitFilter = `blur(${radius}px)`;
-    });
-  }
-
-  function handleShift() {
-    var elements = document.getElementsByClassName('shift');
-
-    Array.from(elements).forEach((element) => {
-	  const duration = (1 - getElementFadingPercentage(element)) * (element.getAttribute('data-shift-duration') || window.innerHeight);
-	  const multiplier = element.getAttribute('data-shift-duration-multiplier') || 1;
-
-      element.style.transform = `translateY(${duration * multiplier}px)`;
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-	handleFade();
-	handleBlur();
-	handleShift();
-  });
-  window.addEventListener('scroll', function() {
-	handleFade();
-	handleBlur();
-	handleShift();
-  });
 </script>
