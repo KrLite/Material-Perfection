@@ -22,7 +22,7 @@ function handleParallax() {
     const rect = element.getBoundingClientRect();
     const screenCssPixelRatio = (window.outerWidth - 8) / window.innerWidth;
     const percentage =
-      ((rect.top - offset) / (end - start)) * screenCssPixelRatio;
+	    (rect.top - offset - start) / (end - start) * screenCssPixelRatio;
 
     const bezierParams = bezier === null ? null : parseCubicBezier(bezier);
     const curve =
