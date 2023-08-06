@@ -34,7 +34,7 @@ theme:
   # Tips: Relative paths can navigate to svgs under path 'mkdocs-material/material/.icons'
   icon:
     logo: logo
-    repo: fontawesome/brands/github-alt
+    repo: material/code-braces
   # Tips: currently, the text font is set under 'stylesheets/css/font.css'
   font:
     # text: 'Source Sans'

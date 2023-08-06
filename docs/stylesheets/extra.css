@@ -5,8 +5,8 @@
   -moz-transform: translate3d(0, 0, 0);
 }
 
-:root {
-  --mdx-parallax: 0;
+html, body {
+  overscroll-behavior-y: none;
 }
 
 /* Code */
@@ -53,10 +53,11 @@ code {
   [data-md-color-switching] :after,
   [data-md-color-switching] :before {
     transition-duration: .5s !important;
+    transition-delay: .1s !important;
   }
 }
 
-body {
-	-webkit-transition: background-color .5s ease !important;
-	transition: background-color .5s ease !important;
+html, body {
+	-webkit-transition: background-color .5s ease .1s !important;
+	transition: background-color .5s ease .1s !important;
 }

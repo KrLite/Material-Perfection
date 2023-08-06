@@ -2,23 +2,13 @@
 hide:
   - navigation
   - toc
+title: "Material Perfection"
 ---
 
 <style>
-  .md-tabs {
-	background-color: transparent;
-	background: linear-gradient(rgba(0, 0, 0, .3), 30%, transparent);
-  }
-
-  .overlay {
-    top: 0;
-	bottom: 0;
-    left: 0;
-	right: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    overflow: hidden;
+  h1, h2, h3, h4, h5, h6 {
+	font-family: "Ogg";
+	letter-spacing: .11rem !important;
   }
 
   .translucent {
@@ -37,6 +27,10 @@ hide:
 	pointer-events: none;
   }
 
+  .ghost--escape {
+	pointer-events: auto;
+  }
+
   .divider {
     height: 3em;
     width: 100%;
@@ -47,26 +41,13 @@ hide:
     opacity: .1;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-	font-family: "Ogg";
-  }
-
   .title {
     width: 100%;
-	height: 120vh;
+	height: 225vh;
   }
 
-  .title-span {
-	top: 0;
-	left: 0;
-	right: 0;
-    width: 100%;
-	height: 120vh;
-	position: absolute;
-  }
-
-  .container {
-    top: 55vh;
+  .title--container {
+    top: 61vh;
     width: 100%;
     height: auto;
     display: flex;
@@ -76,7 +57,11 @@ hide:
 	position: relative;
   }
 
-  .combined {
+  .title--content {
+    flex: 1;
+  }
+
+  .title-combined {
     height: auto;
     width: 5.7em;
     max-height: 100%;
@@ -84,10 +69,6 @@ hide:
     margin-left: 1.1em;
     margin-right: 1.9em;
     object-fit: contain;
-  }
-
-  .content-flex {
-    flex: 1;
   }
 
   .mdx-switch button {
@@ -106,108 +87,143 @@ hide:
     display: block;
   }
 
-  .colored-text {
+  .text-colored {
     color: var(--md-primary-fg-color--auto);
   }
 
-  .md-typeset details.palette, .admonition.palette {
+  .button-use--container {
+    top: 64px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: calc(100% - 64px);
+	position: absolute;
+	z-index: 2;
+  }
+
+  .button-use--text-container {
+	position: absolute;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+	float: left;
+    min-width: 50%;
+  }
+
+  .button-use {
+	top: -420px;
+	margin-top: 45vh;
+	position: sticky;
+	display: flex;
+	justify-content: flex-end;
+	white-space: nowrap;
+  }
+
+  .button-use a {
+	color: var(--md-default-bg-color);
+    background: var(--md-primary-fg-color--auto);
+	box-shadow: 0 0 2em var(--md-default-bg-color);
+	display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: .6em;
+    margin-right: .6em;
+    padding: 1.2em 4.4em;
+    border-radius: 1.2em;
+    font-size: 15px;
+	font-weight: 800;
+    letter-spacing: 0.12em;
+    transition: all .3s cubic-bezier(0.68, -0.1, 0.265, 1.55);
+  }
+
+  .button-use a:hover {
+	color: var(--md-default-bg-color);
+    margin-top: .3em;
+    margin-bottom: .3em;
+    margin-left: 0;
+    margin-right: 0;
+    padding: .9em 5em;
+	text-decoration: underline;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .md-typeset details.colored-amt, .admonition.colored-amt {
     font-size: .9em;
   }
 
-  .mdx-parallax-blur {
-    filter: blur(calc(max(0, var(--mdx-parallax)) * 4px));
+  .para-space {
+    height: 25vh;
+  }
+
+  .trailing-space {
+    height: 120vh;
+  }
+
+  .bg-logo--0 {
+	left: 46vw;
+	top: 55vh;
+	position: absolute;
+	opacity: .08;
+	filter: blur(22px);
 	will-change: transform;
+	transform: scale(1.7);
   }
 
-  .mdx-parallax-shift {
-    transform: translateY(calc(max(0, min(1, var(--mdx-parallax))) * -3vh));
+  .bg-logo--1 {
+	left: -6vw;
+	top: 248vh;
+	position: absolute;
+	opacity: .1;
+	filter: blur(27px);
+	will-change: transform;
+	transform: scale(1.2);
   }
 
-  .mdx-parallax-fade {
-    opacity: calc(1 - var(--mdx-parallax));
+  .bg-logo--2 {
+	left: 43vw;
+	top: 285vh;
+	position: absolute;
+	opacity: .2;
+	filter: blur(10.5px);
+	will-change: transform;
+	transform: scale(0.65);
   }
 
-  *{
-    box-sizing: border-box;
+  .bg-logo--3 {
+	left: 21vw;
+	top: 288vh;
+	position: absolute;
+	opacity: .069;
+	filter: blur(32px);
+	will-change: transform;
+	transform: scale(1.8);
   }
 
-  .parallax {
-    perspective: 100px;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-	right: 0;
-    margin-left: -750px;
-	margin-right: -750px;
+  .parallax--blur {
+    filter: blur(calc(max(0, var(--parallax)) * var(--radius)));
+	will-change: transform; /* Fix rendering issues on Safari  */
   }
 
-  .parallax__layer {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  .parallax--shift {
+    transform: translateY(calc(max(0, min(1, var(--parallax))) * var(--shift)));
   }
 
-  .parallax__layer img {
-    display: block;
-    position: absolute;
-    bottom: 0;
-  }
-
-  .parallax__cover {
-    background: #2D112B;
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    height: 2000px;
-    z-index: 2;
-  }
-
-  .parallax__layer__0 {
-    transform: translateZ(-300px) scale(4);
-  }
-
-  .parallax__layer__1 {
-    transform: translateZ(-250px) scale(3.5);
-  }
-
-  .parallax__layer__2 {
-    transform: translateZ(-200px) scale(3);
-  }
-
-  .parallax__layer__3 {
-    transform: translateZ(-150px) scale(2.5);
-  }
-
-  .parallax__layer__4 {
-    transform: translateZ(-100px) scale(2);
-  }
-
-  .parallax__layer__5 {
-    transform: translateZ(-50px) scale(1.5);
-  }
-
-  .parallax__layer__6 {
-    transform: translateZ(0px) scale(1);
+  .parallax--fade {
+	opacity: calc(1 - var(--parallax));
   }
 </style>
 
 <section class="title">
-  <div class="container parallax parallax-blur parallax-fade" data-mdx-parallax-start="55%" data-mdx-parallax-end="10%">
-    <span class="colored combined" style="-webkit-mask-image: url('assets/images/logo.png');">
+  <div class="title--container parallax smooth parallax--shift parallax--blur parallax--fade" data-parallax-start="55%" data-parallax-end="10%" style="--radius: 12px;--shift: 80vh;">
+    <span class="title-combined colored" style="-webkit-mask-image: url('assets/images/logo.png');">
       <img
         src="assets/images/logo.png"
         alt="Material Perfection"
        />
     </span>
-    <div class="content-flex">
+    <div class="title--content">
       <h1>Material Perfection</h1>
       <blockquote class="translucent sink">
         An Out-of-the-Box Repository that Toggles <a href="https://github.com/squidfunk/mkdocs-material">mkdocs-material</a> to the Perfection.
@@ -216,52 +232,38 @@ hide:
   </div>
 </section>
 
-<section class="parallax">
-  <div class="parallax__layer parallax__layer__0">
-    <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_0.png?raw=true" />
+<section class="button-use--container ghost">
+  <div class="button-use">
+    <div class="button-use--text-container text-center parallax smooth parallax--shift" data-parallax-start="35%" data-parallax-end="0%" style="--shift: 80vh;">
+      <a href="https://github.com/new?template_name=Material-Perfection" class="ghost--escape">USE THIS TEMPLATE →</a>
+    </div>
   </div>
-  <div class="parallax__layer parallax__layer__1">
-    <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_1.png?raw=true" />
-  </div>
-  <div class="parallax__layer parallax__layer__2">
-    <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_2.png?raw=true" />
-  </div>
-  <div class="parallax__layer parallax__layer__3">
-    <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_3.png?raw=true" />
-  </div>
-  <div class="parallax__layer parallax__layer__4">
-    <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_4.png?raw=true" />
-  </div>
-  <div class="parallax__layer parallax__layer__5">
-    <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_5.png?raw=true" />
-  </div>
-  <div class="parallax__layer parallax__layer__6">
-    <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_6.png?raw=true" />
-  </div>
-  <div class="parallax__cover"></div>
 </section>
 
-<!--
-<section class="overlay ghost">
-  <div class="rellax smooth bg-logo-1" data-rellax-speed="-1">
+<section class="ghost">
+  <div class="rellax smooth bg-logo--0" data-rellax-speed="1.3">
     <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
       <img src="assets/images/logo.png" />
     </span>
   </div>
-  <div class="rellax smooth bg-logo-2" data-rellax-speed="-3">
-    <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
+  <div class="smooth bg-logo--1">
+    <span class="rellax colored" data-rellax-speed="-1" style="-webkit-mask-image: url('assets/images/logo.png');">
       <img src="assets/images/logo.png" />
     </span>
   </div>
-  <div class="rellax smooth bg-logo-3" data-rellax-speed="-2">
-    <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
+  <div class="smooth bg-logo--2">
+    <span class="rellax colored" data-rellax-speed="-3" style="-webkit-mask-image: url('assets/images/logo.png');">
+      <img src="assets/images/logo.png" />
+    </span>
+  </div>
+  <div class="smooth bg-logo--3">
+    <span class="rellax colored" data-rellax-speed="-2" style="-webkit-mask-image: url('assets/images/logo.png');">
       <img src="assets/images/logo.png" />
     </span>
   </div>
 </section>
--->
 
-<h1 class="smooth mdx-parallax mdx-parallax-shift mdx-parallax-blur mdx-parallax-fade" data-mdx-parallax-start="23%" data-mdx-parallax-end="5%" data-mdx-parallax-bezier="cubic-bezier(.17, .84, .44, 1)" id="title">Mark It Down</h1>
+<h1 class="smooth parallax parallax--shift parallax--blur parallax--fade" data-parallax-start="30%" data-parallax-end="5%" data-parallax-bezier="cubic-bezier(.17, .84, .44, 1)" style="--radius: 4px;--shift: -3vh;">Mark It Down</h1>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
 euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
@@ -278,9 +280,9 @@ Lorem ipsum.
 <div class="divider"></div>
 <div class="para-space"></div>
 
-<h1 class="smooth mdx-parallax mdx-parallax-shift mdx-parallax-blur mdx-parallax-fade" data-mdx-parallax-start="23%" data-mdx-parallax-end="5%" data-mdx-parallax-bezier="cubic-bezier(.17, .84, .44, 1)">Deep Customization</h1>
+<h1 class="smooth parallax parallax--shift parallax--blur parallax--fade" data-parallax-start="30%" data-parallax-end="5%" data-parallax-bezier="cubic-bezier(.17, .84, .44, 1)" style="--radius: 4px;--shift: -3vh;">Fine Tuned</h1>
 
-???+ palette inline end "<span class="mdx-switch"><span class="colored-text">Paint It Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
+???+ palette inline end "<span class="mdx-switch"><span class="text-colored">Paint It Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
 
     <div class="mdx-switch">
         <button data-md-color-primary="red"><code>red</code></button>
@@ -344,7 +346,7 @@ Lorem ipsum.
 <div class="divider"></div>
 <div class="para-space"></div>
 
-<h1 class="smooth mdx-parallax mdx-parallax-shift mdx-parallax-blur mdx-parallax-fade" data-mdx-parallax-start="23%" data-mdx-parallax-end="5%" data-mdx-parallax-bezier="cubic-bezier(.17, .84, .44, 1)">Out-of-the-Box</h1>
+<h1 class="smooth parallax parallax--shift parallax--blur parallax--fade" data-parallax-start="30%" data-parallax-end="5%" data-parallax-bezier="cubic-bezier(.17, .84, .44, 1)" style="--radius: 4px;--shift: -3vh;">Out-of-the-Box</h1>
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
 euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
@@ -358,7 +360,7 @@ purus auctor massa, nec semper lorem quam in massa.
 
 Lorem ipsum.
 
-<div class="ending-space"></div>
+<div class="trailing-space"></div>
 
 <script src="javascripts/rellax.min.js"></script>
 <script>

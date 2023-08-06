@@ -1,10 +1,9 @@
 function handleParallax() {
-  var elements = document.getElementsByClassName("mdx-parallax");
+  var elements = document.getElementsByClassName("parallax");
 
   Array.from(elements).forEach((element) => {
-    var start = element.getAttribute("data-mdx-parallax-start") || "0%";
-    var end =
-      element.getAttribute("data-mdx-parallax-end") || "100%";
+    var start = element.getAttribute("data-parallax-start") || "0%";
+    var end = element.getAttribute("data-parallax-end") || "100%";
 
     if (start.endsWith("%")) {
       start = parsePercentage(start) * window.innerHeight;
@@ -16,13 +15,13 @@ function handleParallax() {
 
     if (start === end) return 0;
 
-    const offset = element.getAttribute("data-mdx-parallax-offset") || 0;
-    const bezier = element.getAttribute("data-mdx-parallax-bezier") || null;
+    const offset = element.getAttribute("data-parallax-offset") || 0;
+    const bezier = element.getAttribute("data-parallax-bezier") || null;
 
     const rect = element.getBoundingClientRect();
     const screenCssPixelRatio = (window.outerWidth - 8) / window.innerWidth;
     const percentage =
-	    (rect.top - offset - start) / (end - start) * screenCssPixelRatio;
+      ((rect.top - offset - start) / (end - start)) * screenCssPixelRatio;
 
     const bezierParams = bezier === null ? null : parseCubicBezier(bezier);
     const curve =
@@ -36,11 +35,7 @@ function handleParallax() {
             percentage
           );
 
-	if (element.id === "title") {
-		console.log(start, end, rect.top - offset, percentage);
-	}
-
-    element.style.setProperty("--mdx-parallax", curve);
+    element.style.setProperty("--parallax", curve);
   });
 }
 
