@@ -10,7 +10,7 @@ hide:
   }
 
   .sink {
-	transform: translateY(-1.5em);
+    transform: translateY(-1.5em);
   }
 
   .smooth {
@@ -102,7 +102,7 @@ hide:
   }
 
   .parallax-shift-s {
-    transform: translateY(calc((1 - var(--mdx-parallax)) * -100px));
+    transform: translateY(calc(max(0, 1 - var(--mdx-parallax)) * -100px));
   }
 </style>
 
