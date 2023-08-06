@@ -98,7 +98,7 @@ hide:
   }
 
   .parallax-shift {
-    transform: translateY(calc((1 - var(--mdx-parallax)) * 30vh));
+    transform: translateY(calc((1 - var(--mdx-parallax)) * 60vh));
   }
 
   .parallax-shift-s {
