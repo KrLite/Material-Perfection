@@ -7,8 +7,8 @@ title: "Material Perfection"
 
 <style>
   h1, h2, h3, h4, h5, h6 {
-	font-family: "Ogg";
-	letter-spacing: .11rem !important;
+    font-family: "Ogg";
+    letter-spacing: .11rem !important;
   }
 
   .translucent {
@@ -24,11 +24,11 @@ title: "Material Perfection"
   }
 
   .ghost {
-	pointer-events: none;
+    pointer-events: none;
   }
 
   .ghost--escape {
-	pointer-events: auto;
+    pointer-events: auto;
   }
 
   .divider {
@@ -43,7 +43,7 @@ title: "Material Perfection"
 
   .title {
     width: 100%;
-	height: 225vh;
+    height: 225vh;
   }
 
   .title--container {
@@ -54,7 +54,7 @@ title: "Material Perfection"
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: flex-start;
-	position: relative;
+    position: relative;
   }
 
   .title--content {
@@ -93,36 +93,37 @@ title: "Material Perfection"
 
   .button-use--container {
     top: 64px;
-	left: 0;
-	right: 0;
-	width: 100%;
-	height: calc(100% - 64px - 200vh);
-	position: absolute;
-	z-index: 2;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100% - 64px - 200vh);
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
   }
 
   .button-use--text-container {
-	position: absolute;
+    position: absolute;
     padding-right: 1.5em;
     padding-left: 1.5em;
-	float: left;
+    float: left;
     min-width: 50%;
   }
 
   .button-use {
-	top: -420px;
-	margin-top: 45vh;
-	position: sticky;
-	display: flex;
-	justify-content: flex-end;
-	white-space: nowrap;
+    top: -420px;
+    margin-top: 45vh;
+    position: sticky;
+    display: flex;
+    justify-content: flex-end;
+    white-space: nowrap;
   }
 
   .button-use a {
-	color: var(--md-default-bg-color);
+    color: var(--md-default-bg-color);
     background: var(--md-primary-fg-color--auto);
-	box-shadow: 0 0 2em var(--md-default-bg-color);
-	display: inline-block;
+    box-shadow: 0 0 2em var(--md-default-bg-color);
+    display: inline-block;
     margin-top: 0;
     margin-bottom: 0;
     margin-left: .6em;
@@ -130,19 +131,19 @@ title: "Material Perfection"
     padding: 1.2em 4.4em;
     border-radius: 1.2em;
     font-size: 15px;
-	font-weight: 800;
+    font-weight: 800;
     letter-spacing: 0.12em;
     transition: all .3s cubic-bezier(0.68, -0.1, 0.265, 1.55);
   }
 
   .button-use a:hover {
-	color: var(--md-default-bg-color);
+    color: var(--md-default-bg-color);
     margin-top: .3em;
     margin-bottom: .3em;
     margin-left: 0;
     margin-right: 0;
     padding: .9em 5em;
-	text-decoration: underline;
+    text-decoration: underline;
   }
 
   .text-center {
@@ -161,49 +162,60 @@ title: "Material Perfection"
     height: 120vh;
   }
 
+  .bg-logo--container {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    hright: 100;
+    position: absolute;
+    ovetflow: hidden;
+  }
+
   .bg-logo--0 {
-	left: 46vw;
-	top: 55vh;
-	position: absolute;
-	opacity: .08;
-	filter: blur(22px);
-	will-change: transform;
-	transform: scale(1.7);
+    left: 46vw;
+    top: 55vh;
+    position: absolute;
+    opacity: .08;
+    filter: blur(22px);
+    will-change: transform;
+  b transform: scale(1.7);
   }
 
   .bg-logo--1 {
-	left: -6vw;
-	top: 248vh;
-	position: absolute;
-	opacity: .1;
-	filter: blur(27px);
-	will-change: transform;
-	transform: scale(1.2);
+    left: -6vw;
+    top: 248vh;
+    position: absolute;
+    opacity: .1;
+    filter: blur(27px);
+    will-change: transform;
+    transform: scale(1.2);
   }
 
   .bg-logo--2 {
-	left: 43vw;
-	top: 285vh;
-	position: absolute;
-	opacity: .2;
-	filter: blur(10.5px);
-	will-change: transform;
-	transform: scale(0.65);
+    left: 43vw;
+    top: 285vh;
+    position: absolute;
+    opacity: .2;
+    filter: blur(10.5px);
+    will-change: transform;
+    transform: scale(0.65);
   }
 
   .bg-logo--3 {
-	left: 21vw;
-	top: 288vh;
-	position: absolute;
-	opacity: .069;
-	filter: blur(32px);
-	will-change: transform;
-	transform: scale(1.8);
+    left: 21vw;
+    top: 288vh;
+    position: absolute;
+    opacity: .069;
+    filter: blur(32px);
+    will-change: transform;
+    transform: scale(1.8);
   }
 
   .parallax--blur {
     filter: blur(calc(max(0, var(--parallax)) * var(--radius)));
-	will-change: transform; /* Fix rendering issues on Safari  */
+    will-change: transform; /* Fix rendering issues on Safari  */
   }
 
   .parallax--shift {
@@ -211,7 +223,7 @@ title: "Material Perfection"
   }
 
   .parallax--fade {
-	opacity: calc(1 - var(--parallax));
+    opacity: calc(1 - var(--parallax));
   }
 </style>
 
@@ -240,7 +252,7 @@ title: "Material Perfection"
   </div>
 </section>
 
-<section class="ghost">
+<section class="bg-logo--container ghost">
   <div class="rellax smooth bg-logo--0" data-rellax-speed="1.3">
     <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
       <img src="assets/images/logo.png" />
