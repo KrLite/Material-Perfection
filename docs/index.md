@@ -92,11 +92,11 @@ title: "Material Perfection"
   }
 
   .button-use--container {
-    top: 30vh;
+    top: 10vh;
     left: 0;
     right: 0;
     width: 100%;
-    height: calc(100% - 30vh - 200vh);
+    height: calc(100% - 10vh - 200vh);
     position: absolute;
     z-index: 2;
     overflow: hidden;
