@@ -170,7 +170,7 @@ title: "Material Perfection"
     width: 100%;
     hright: 100;
     position: absolute;
-    ovetflow: hidden;
+    overflow: hidden;
   }
 
   .bg-logo--0 {
@@ -254,7 +254,6 @@ title: "Material Perfection"
 </section>
 -->
 
-<!--
 <section class="bg-logo--container ghost">
   <div class="rellax smooth bg-logo--0" data-rellax-speed="1.3">
     <span class="colored" style="-webkit-mask-image: url('assets/images/logo.png');">
@@ -277,7 +276,6 @@ title: "Material Perfection"
     </span>
   </div>
 </section>
--->
 
 <h1 class="smooth parallax parallax--shift parallax--blur parallax--fade" data-parallax-start="30%" data-parallax-end="5%" data-parallax-bezier="cubic-bezier(.17, .84, .44, 1)" style="--radius: 4px;--shift: -3vh;">Mark It Down</h1>
 
