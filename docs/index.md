@@ -238,12 +238,13 @@ title: "Material Perfection"
     <div class="title--content">
       <h1>Material Perfection</h1>
       <blockquote class="translucent sink">
-        An Out-of-the-Box Repository that Toggles <a href="https://github.com/squidfunk/mkdocs-material">mkdocs-material</a> to the Perfection.
+        An Out-of-the-Box Repository that Toggles <a href="https://github.com/squidfunk/mkdocs-material">Material for MkDocs</a> to the Perfection.
       </blockquote>
     </div>
   </div>
 </section>
 
+<!--
 <section class="button-use--container ghost">
   <div class="button-use">
     <div class="button-use--text-container text-center parallax smooth parallax--shift" data-parallax-start="35%" data-parallax-end="0%" style="--shift: 80vh;">
@@ -251,6 +252,7 @@ title: "Material Perfection"
     </div>
   </div>
 </section>
+-->
 
 <section class="bg-logo--container ghost">
   <div class="rellax smooth bg-logo--0" data-rellax-speed="1.3">
@@ -277,17 +279,11 @@ title: "Material Perfection"
 
 <h1 class="smooth parallax parallax--shift parallax--blur parallax--fade" data-parallax-start="30%" data-parallax-end="5%" data-parallax-bezier="cubic-bezier(.17, .84, .44, 1)" style="--radius: 4px;--shift: -3vh;">Mark It Down</h1>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
-euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
-purus auctor massa, nec semper lorem quam in massa.
+**[Material for MkDocs]** allows you to write and publish beautiful static HTML pages in minutes, while **Material Perfection** can provide you QoL modifications, stylesheets and javascripts.
 
-Lorem ipsum.
+Gathered all in one, novmore configuration needed, **Material Perfection** have everything for you to write professional markdown pages. Not only benifiting readers, but also writers.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
-euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
-purus auctor massa, nec semper lorem quam in massa.
-
-Lorem ipsum.
+[mkdocs-material]: https://github.com/squidfunc/mkdocs-material
 
 <div class="divider"></div>
 <div class="para-space"></div>
