@@ -92,11 +92,11 @@ title: "Material Perfection"
   }
 
   .button-use--container {
-    top: 64px;
+    top: 10vh;
     left: 0;
     right: 0;
     width: 100%;
-    height: calc(100% - 64px - 200vh);
+    height: calc(100% - 10vh - 200vh);
     position: absolute;
     z-index: 2;
     overflow: hidden;
@@ -180,7 +180,7 @@ title: "Material Perfection"
     opacity: .08;
     filter: blur(22px);
     will-change: transform;
-  b transform: scale(1.7);
+    transform: scale(1.7);
   }
 
   .bg-logo--1 {
@@ -244,7 +244,6 @@ title: "Material Perfection"
   </div>
 </section>
 
-<!--
 <section class="button-use--container ghost">
   <div class="button-use">
     <div class="button-use--text-container text-center parallax smooth parallax--shift" data-parallax-start="35%" data-parallax-end="0%" style="--shift: 80vh;">
@@ -252,7 +251,6 @@ title: "Material Perfection"
     </div>
   </div>
 </section>
--->
 
 <section class="bg-logo--container ghost">
   <div class="rellax smooth bg-logo--0" data-rellax-speed="1.3">
