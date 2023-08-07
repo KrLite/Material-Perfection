@@ -286,7 +286,7 @@ title: "Material Perfection"
 
 **[Material for MkDocs]** allows you to write and publish beautiful static HTML pages in minutes, while **Material Perfection** can provide you QoL modifications, stylesheets and javascripts.
 
-    [Material for MkDocs]: https://github.com/squidfunc/mkdocs-material
+  [Material for MkDocs]: https://github.com/squidfunc/mkdocs-material
 
 Gathered all in one, novmore configuration needed, **Material Perfection** have everything for you to write professional markdown pages. Not only benifiting readers, but also writers.
 
