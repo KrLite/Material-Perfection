@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+{% extends "main.html" %}
+{% block tabs %}{% endblock %}
 
-<html>
-<body>
 <style>
 * {
     box-sizing: border-box;
@@ -132,8 +131,6 @@ footer {
   transform: translateZ(-250px) scale(3.5);
 }
 </style>
-  
-<header>HEADER</header>
 
 <div class="parallax">
     <div class="parallax__placeholder bg-red">
@@ -166,8 +163,6 @@ footer {
         <div class="sp-large"></div>
     </div>
     <div class="paralax__group purple">
-        <footer>FOOTER</footer>
+        {% block footer %}{% endblock %}
     </div>
 </div>
-</body>
-</html>
