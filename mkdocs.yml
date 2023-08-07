@@ -6,7 +6,7 @@ strict: false
 # Contents
 nav:
   - Landing: index.md
-  - Test: test.md
+  - Test: parallax.html
 
 # Theme
 theme:
