@@ -1,5 +1,4 @@
 ---
-hide:
-  - navigation
-  - toc
+title: Title
+template: parallax.html
 ---
