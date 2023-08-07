@@ -288,7 +288,7 @@ title: "Material Perfection"
 
   [Material for MkDocs]: https://github.com/squidfunc/mkdocs-material
 
-Gathered all in one, novmore configuration needed, **Material Perfection** have everything for you to write professional markdown pages. Not only benifiting readers, but also writers.
+Gathered all in one, no more configuration needed, **Material Perfection** have everything for you to write professional markdown pages. Not only benifiting readers, but also writers.
 
 [mkdocs-material]: https://github.com/squidfunc/mkdocs-material
 
