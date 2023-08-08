@@ -41,29 +41,11 @@
 /* Image color transformer */
 /* Credit: https://stackoverflow.com/a/76821538 */
 .colored {
-  display: inline-block;
-  background-color: var(--md-primary-fg-color--auto);
-  -webkit-mask-size: 95%;
+  background-color: var(--colored);
+  -webkit-mask-size: 100%;
   -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
 }
 
 .colored > img {
   opacity: 0;
-  width: auto;
-  display: block;
-}
-
-.colored__bg {
-  display: inline-block;
-  background-color: var(--md-default-bg-color);
-  -webkit-mask-size: 95%;
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-}
-
-.colored__bg > img {
-  opacity: 0;
-  width: auto;
-  display: block;
 }

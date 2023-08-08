@@ -217,24 +217,11 @@ title: "Material Perfection"
     will-change: transform;
     transform: scale(1.8);
   }
-
-  .parallax--blur {
-    filter: blur(calc(max(0, var(--parallax)) * var(--radius)));
-    will-change: transform; /* Fix rendering issues on Safari  */
-  }
-
-  .parallax--shift {
-    transform: translateY(calc(max(0, min(1, var(--parallax))) * var(--shift)));
-  }
-
-  .parallax--fade {
-    opacity: calc(1 - var(--parallax));
-  }
 </style>
 
 <section class="title">
-  <div class="title--container parallax smooth parallax--shift parallax--blur parallax--fade" data-parallax-start="55%" data-parallax-end="10%" style="--radius: 12px;--shift: 80vh;">
-    <span class="title-combined colored" style="-webkit-mask-image: url('assets/images/logo.png');">
+  <div class="title--container smooth">
+    <span class="title-combined colored" style="-webkit-mask-image: url('assets/images/logo.png');--colored: var(--md-primary-fg-color--auto);">
       <img
         src="assets/images/logo.png"
         alt="Material Perfection"
@@ -248,16 +235,6 @@ title: "Material Perfection"
     </div>
   </div>
 </section>
-
-<!--
-<section class="button-use--container ghost">
-  <div class="button-use">
-    <div class="button-use--text-container text-center parallax smooth parallax--shift" data-parallax-start="35%" data-parallax-end="0%" style="--shift: 80vh;">
-      <a href="https://github.com/new?template_name=Material-Perfection" class="ghost--escape">USE THIS TEMPLATE →</a>
-    </div>
-  </div>
-</section>
--->
 
 <section class="bg-logo--container ghost">
   <div class="rellax smooth bg-logo--0" data-rellax-speed="1.3">
@@ -282,7 +259,7 @@ title: "Material Perfection"
   </div>
 </section>
 
-<h1 class="smooth parallax parallax--shift parallax--blur parallax--fade" data-parallax-start="30%" data-parallax-end="5%" data-parallax-bezier="cubic-bezier(.17, .84, .44, 1)" style="--radius: 4px;--shift: -3vh;">Mark It Down</h1>
+# Mark It Down
 
 **[Material for MkDocs]** allows you to write and publish beautiful static HTML pages in minutes, while **Material Perfection** can provide you QoL modifications, stylesheets and javascripts.
 
@@ -295,7 +272,7 @@ Gathered all in one, no more configuration needed, **Material Perfection** have 
 <div class="divider"></div>
 <div class="para-space"></div>
 
-<h1 class="smooth parallax parallax--shift parallax--blur parallax--fade" data-parallax-start="30%" data-parallax-end="5%" data-parallax-bezier="cubic-bezier(.17, .84, .44, 1)" style="--radius: 4px;--shift: -3vh;">Fine Tuned</h1>
+# Fine Tuned
 
 ???+ palette inline end "<span class="mdx-switch"><span class="text-colored">Paint It Pretty</span>&emsp;<button data-md-color-primary="--md-primary-fg-color--auto"><code>clear</code></button></span>"
 
@@ -361,7 +338,7 @@ Lorem ipsum.
 <div class="divider"></div>
 <div class="para-space"></div>
 
-<h1 class="smooth parallax parallax--shift parallax--blur parallax--fade" data-parallax-start="30%" data-parallax-end="5%" data-parallax-bezier="cubic-bezier(.17, .84, .44, 1)" style="--radius: 4px;--shift: -3vh;">Out-of-the-Box</h1>
+Out of the Box
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
 euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
