@@ -3,159 +3,83 @@
 {% block styles %}
 {{ super() }}
 <style>
-* {
+  * {
     box-sizing: border-box;
-}
+  }
 
-html,
-body {
-    background-color: #fedcc8;
-}
-
-md-header, md-footer {
-	z-index: 100;
-}
-
-md-header {
-    top: 0 !important;
-    position: absolute !important;
-}
-
-md-footer {
-    bottom: 0;
-    position: relative;
-}
-
-.md-main {
-	background: red;
-}
-
-.parallax {
-    perspective: 100px;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.parallax__layer {
+  .md-tabs {
+    top: 2.4rem;
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-}
+    background: transparent;
+  }
 
-.parallax__layer img {
-    display: block;
-    position: absolute;
-    bottom: 0;
-}
-
-.parallax__placeholder {
-    position: relative;
-    height: 100vh;
-    transform-style: preserve-3d;
-}
-
-.parallax__group {
-    position: relative;
-    height: auto;
-    transform-style: preserve-3d;
-}
-
-.green {
-    background: green;
-}
-
-.red {
-    background: red;
-}
-
-.yellow {
-    background: yellow;
-}
-
-.purple {
-    background: purple;
-}
-
-.sp-small {
-    height: 30vh;
-}
-
-.sp-medium {
-    height: 100vh;
-}
-
-.sp-large {
-    height: 300vh;
-}
-
-.parallax__layer__6 {
-  transform: translateZ(0px) scale(1);
-}
-
-.parallax__layer__5 {
-  transform: translateZ(-50px) scale(1.5);
-}
-
-.parallax__layer__4 {
-  transform: translateZ(-100px) scale(2);
-}
-
-.parallax__layer__3 {
-  transform: translateZ(-150px) scale(2.5);
-}
-
-.parallax__layer__2 {
-  transform: translateZ(-200px) scale(3);
-}
-
-.parallax__layer__1 {
-  transform: translateZ(-250px) scale(3.5);
-}
-
-.parallax__layer__0 {
-  transform: translateZ(-300px) scale(4);
-}
+  .placeholder {
+    height: var(--placeholder__height);
+	background: var(--placeholder__background);
+  }
 </style>
 {% endblock %}
 
+{% block header %}
+  {% include "partials/header.html" %}
+{% endblock %}
+
+{% block tabs %}
+{% endblock %}
+
+{% block container %}
 <div class="parallax">
-    <div class="parallax__placeholder">
-        <div class="parallax__layer parallax__layer__0">
-            <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_0.png?raw=true" />
-        </div>
-        <div class="parallax__layer parallax__layer__1">
-            <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_1.png?raw=true" />
-        </div>
-        <div class="parallax__layer parallax__layer__2">
-            <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_2.png?raw=true" />
-        </div>
-        <div class="parallax__layer parallax__layer__3">
-            <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_3.png?raw=true" />
-        </div>
-        <div class="parallax__layer parallax__layer__4">
-            <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_4.png?raw=true" />
-        </div>
-        <div class="parallax__layer parallax__layer__5">
-            <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_5.png?raw=true" />
-        </div>
-        <div class="parallax__layer parallax__layer__6">
-            <img src="https://github.com/samdbeckham/blog/blob/master/dev/_assets/images/articles/firewatch/layer_6.png?raw=true" />
-        </div>
+  <div class="parallax__placeholder">
+    <div class="parallax__layer" style="--parallax__layer-depth: 0;">
+      <img
+        src="assets/parallax/firewatch/depth_0.png?raw=true"
+      />
     </div>
-    <div class="parallax__group green">
-        <div class="sp-small"></div>
+    <div class="parallax__layer" style="--parallax__layer-depth: 1;">
+      <img
+        src="assets/parallax/firewatch/depth_1.png?raw=true"
+      />
     </div>
-    <div class="parallax__group red">
-        <div class="sp-medium"></div>
+    <div class="parallax__layer" style="--parallax__layer-depth: 2;">
+      <img
+        src="assets/parallax/firewatch/depth_2.png?raw=true"
+      />
     </div>
-    <div class="parallax__group yellow">
-        <div class="sp-large"></div>
+    <div class="parallax__layer" style="--parallax__layer-depth: 3;">
+      <img
+        src="assets/parallax/firewatch/depth_3.png?raw=true"
+      />
     </div>
-    <div class="paralax__group purple">
+    <div class="parallax__layer" style="--parallax__layer-depth: 4;">
+      <img
+        src="assets/parallax/firewatch/depth_4.png?raw=true"
+      />
     </div>
+    <div class="parallax__layer" style="--parallax__layer-depth: 5;">
+      <img
+        src="assets/parallax/firewatch/depth_5.png?raw=true"
+      />
+    </div>
+    <div class="parallax__layer" style="--parallax__layer-depth: 6;">
+      <img
+        src="assets/parallax/firewatch/depth_6.png?raw=true"
+      />
+    </div>
+    <div class="parallax__scrollwrap">{% include "partials/tabs.html" %}</div>
+  </div>
+  <div class="parallax__group">
+    <div class="placeholder" style="--placeholder__height: 100vh; --placeholder__background: yellow;"></div>
+  </div>
+  <div class="parallax__group">
+    <div class="placeholder" style="--placeholder__height: 200vh; --placeholder__background: orange;"></div>
+  </div>
+  <div class="parallax__group">
+    <div class="placeholder" style="--placeholder__height: 300vh; --placeholder__background: red;"></div>
+  </div>
+  <div class="paralax__group">
+	{% include "partials/footer.html" %}
+  </div>
 </div>
+{% endblock %}
+
+{% block footer %}{% endblock %}
