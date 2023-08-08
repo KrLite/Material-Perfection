@@ -33,6 +33,7 @@
   display: flex;
   justify-content: center;
   transform: translateZ(calc(0px - var(--parallax__layer-depth) * var(--parallax__perspective) * var(--parallax__multiplier))) scale(calc(1 + var(--parallax__layer-depth) * var(--parallax__multiplier)));
+  pointer-events: none;
 }
 
 .parallax__layer img {

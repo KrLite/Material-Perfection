@@ -20,8 +20,42 @@
 	background: var(--placeholder__background);
   }
 
-  .z-index {
-	z-index: var(--z-index);
+  .translucent {
+    opacity: .5;
+  }
+
+  .sink {
+    transform: translateY(-1.5em);
+  }
+
+  .title {
+    width: 100%;
+    height: 225vh;
+  }
+
+  .title__container {
+    top: 61vh;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+  }
+
+  .title__content {
+    flex: 1;
+  }
+
+  .title__combined {
+    height: auto;
+    width: 5.7em;
+    max-height: 100%;
+    max-width: calc(30% - 3em);
+    margin-left: 1.1em;
+    margin-right: 1.9em;
+    object-fit: contain;
   }
 </style>
 {% endblock %}
@@ -58,23 +92,39 @@
         src="assets/parallax/firewatch/depth_3.png"
       />
     </div>
-    <div class="parallax__layer colored" style="--parallax__layer-depth: 2;-webkit-mask-image: url('assets/parallax/firewatch/depth_2.png');--colored: var(--md-default-bg-color);-webkit-mask-position: bottom;">
+    <div class="parallax__layer colored" style="--parallax__layer-depth: 2;-webkit-mask-image: url('assets/parallax/firewatch/depth_2.png');--colored: var(--md-default-bg-color);-webkit-mask-position: bottom;z-index: 4;">
       <img
         src="assets/parallax/firewatch/depth_2.png"
       />
-    </div>
-    <div class="parallax__layer colored" style="--parallax__layer-depth: 1;-webkit-mask-image: url('assets/parallax/firewatch/depth_1.png');--colored: var(--md-default-bg-color);-webkit-mask-position: bottom;">
+	</div>
+    <div class="parallax__layer colored" style="--parallax__layer-depth: 1;-webkit-mask-image: url('assets/parallax/firewatch/depth_1.png');--colored: var(--md-default-bg-color);-webkit-mask-position: bottom;z-index: 5;">
       <img
         src="assets/parallax/firewatch/depth_1.png"
       />
     </div>
-    <div class="parallax__layer colored" style="--parallax__layer-depth: 0;-webkit-mask-image: url('assets/parallax/firewatch/depth_0.png');--colored: var(--md-default-bg-color);-webkit-mask-position: bottom;">
+    <div class="parallax__layer colored" style="--parallax__layer-depth: 0;-webkit-mask-image: url('assets/parallax/firewatch/depth_0.png');--colored: var(--md-default-bg-color);-webkit-mask-position: bottom;z-index: 20;">
       <img
         src="assets/parallax/firewatch/depth_0.png"
       />
     </div>
     <div class="parallax__scrollwrap">
 		{% include "partials/tabs.html" %}
+		<section class="title">
+			<div class="title__container">
+			  <span class="title__combined colored" style="-webkit-mask-image: url('assets/images/logo.png');--colored: var(--md-default-bg-color--auto);">
+				<img
+				  src="assets/images/logo.png"
+				  alt="Material Perfection"
+				 />
+			  </span>
+			  <div class="title__content" style="color: var(--md-default-bg-color);">
+				<h1>Material Perfection</h1>
+				<blockquote class="translucent sink">
+				  An Out-of-the-Box Repository that Toggles <a href="https://github.com/squidfunk/mkdocs-material">Material for MkDocs</a> to the Perfection.
+				</blockquote>
+			  </div>
+			</div>
+		  </section>
 	</div>
   </div>
   <div class="parallax__group">
