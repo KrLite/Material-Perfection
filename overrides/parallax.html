@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{{ super() }}
+
 {% block styles %}
 {{ super() }}
 <style>
@@ -17,6 +19,10 @@
     height: var(--placeholder__height);
 	background: var(--placeholder__background);
   }
+
+  .z-index {
+	z-index: var(--z-index);
+  }
 </style>
 {% endblock %}
 
@@ -29,41 +35,57 @@
 
 {% block container %}
 <div class="parallax">
-  <div class="parallax__placeholder">
-    <div class="parallax__layer" style="--parallax__layer-depth: 0;">
-      <img
-        src="assets/parallax/firewatch/depth_0.png?raw=true"
-      />
+  <div class="parallax__placeholder" style="--parallax__multiplier: .12;">
+    <div class="parallax__layer" style="--parallax__layer-depth: 20;background: var(--md-primary-fg-color)">
     </div>
-    <div class="parallax__layer" style="--parallax__layer-depth: 1;">
-      <img
-        src="assets/parallax/firewatch/depth_1.png?raw=true"
-      />
+    <div class="parallax__layer" style="--parallax__layer-depth: 11;">
+	  <span class="colored__bg" style="--mask-image: url('../assets/parallax/firewatch/depth_6.png?raw=true');"></span>
+        <img
+          src="../assets/parallax/firewatch/depth_6.png?raw=true"
+        />
+	  </span>
     </div>
-    <div class="parallax__layer" style="--parallax__layer-depth: 2;">
-      <img
-        src="assets/parallax/firewatch/depth_2.png?raw=true"
-      />
-    </div>
-    <div class="parallax__layer" style="--parallax__layer-depth: 3;">
-      <img
-        src="assets/parallax/firewatch/depth_3.png?raw=true"
-      />
-    </div>
-    <div class="parallax__layer" style="--parallax__layer-depth: 4;">
-      <img
-        src="assets/parallax/firewatch/depth_4.png?raw=true"
-      />
+    <div class="parallax__layer" style="--parallax__layer-depth: 7;">
+	  <span class="colored__bg" style="--mask-image: url('../assets/parallax/firewatch/depth_5.png?raw=true');"></span>
+	    <img
+	  	  src="../assets/parallax/firewatch/depth_5.png?raw=true"
+	    />
+	  </span>
     </div>
     <div class="parallax__layer" style="--parallax__layer-depth: 5;">
-      <img
-        src="assets/parallax/firewatch/depth_5.png?raw=true"
-      />
+	  <span class="colored__bg" style="--mask-image: url('../assets/parallax/firewatch/depth_4.png?raw=true');"></span>
+	    <img
+	  	  src="../assets/parallax/firewatch/depth_4.png?raw=true"
+	    />
+	  </span>
     </div>
-    <div class="parallax__layer" style="--parallax__layer-depth: 6;">
-      <img
-        src="assets/parallax/firewatch/depth_6.png?raw=true"
-      />
+    <div class="parallax__layer" style="--parallax__layer-depth: 3;">
+	  <span class="colored__bg" style="--mask-image: url('../assets/parallax/firewatch/depth_3.png?raw=true');"></span>
+	    <img
+	  	  src="../assets/parallax/firewatch/depth_3.png?raw=true"
+	    />
+	  </span>
+    </div>
+    <div class="parallax__layer" style="--parallax__layer-depth: 2;">
+	  <span class="colored__bg" style="--mask-image: url('../assets/parallax/firewatch/depth_2.png?raw=true');"></span>
+	    <img
+	  	  src="../assets/parallax/firewatch/depth_2.png?raw=true"
+	    />
+	  </span>
+    </div>
+    <div class="parallax__layer" style="--parallax__layer-depth: 1;">
+	  <span class="colored__bg" style="--mask-image: url('../assets/parallax/firewatch/depth_1.png?raw=true');"></span>
+	    <img
+	  	  src="../assets/parallax/firewatch/depth_1.png?raw=true"
+	    />
+	  </span>
+    </div>
+    <div class="parallax__layer z-index" style="--parallax__layer-depth: 0;--z-index: 2;">
+	  <span class="colored__bg" style="--mask-image: url('../assets/parallax/firewatch/depth_0.png?raw=true');"></span>
+	    <img
+	  	  src="../assets/parallax/firewatch/depth_0.png?raw=true"
+	    />
+	  </span>
     </div>
     <div class="parallax__scrollwrap">{% include "partials/tabs.html" %}</div>
   </div>

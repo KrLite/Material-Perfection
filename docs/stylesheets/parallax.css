@@ -1,5 +1,5 @@
 :root {
-  --parallax__perspective: 10px;
+  --parallax__perspective: 100px;
 }
 
 .parallax {
@@ -32,7 +32,7 @@
   left: 0;
   display: flex;
   justify-content: center;
-  transform: translateZ(calc(0 - var(--parallax__layer-depth) * var(--parallax__perspective))) scale(calc(1 + var(--parallax__layer-depth)));
+  transform: translateZ(calc(0px - var(--parallax__layer-depth) * var(--parallax__perspective) * var(--parallax__multiplier))) scale(calc(1 + var(--parallax__layer-depth) * var(--parallax__multiplier)));
 }
 
 .parallax__layer img {

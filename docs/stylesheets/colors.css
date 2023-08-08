@@ -43,12 +43,36 @@
 .colored {
   display: inline-block;
   background-color: var(--md-primary-fg-color--auto);
+  mask-size: 95%;
   -webkit-mask-size: 95%;
+  mask-repeat: no-repeat;
   -webkit-mask-repeat: no-repeat;
+  mask-position: center;
   -webkit-mask-position: center;
+  mask-image: var(--mask-image);
+  -webkit-mask-image: var(--mask-image);
 }
 
 .colored > img {
+  opacity: 0;
+  width: auto;
+  display: block;
+}
+
+.colored__bg {
+  display: inline-block;
+  background-color: var(--md-default-bg-color);
+  mask-size: 95%;
+  -webkit-mask-size: 95%;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-position: center;
+  mask-image: var(--mask-image);
+  -webkit-mask-image: var(--mask-image);
+}
+
+.colored__bg > img {
   opacity: 0;
   width: auto;
   display: block;
