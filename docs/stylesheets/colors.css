@@ -40,12 +40,13 @@
 
 /* Image color transformer */
 /* Credit: https://stackoverflow.com/a/76821538 */
-.colored {
+.colored-icon {
   background-color: var(--colored);
   -webkit-mask-size: 100%;
   -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 
-.colored > img {
+.colored-icon > img {
   opacity: 0;
 }
